@@ -1,0 +1,71 @@
+/* SimplyCity — Colour tokens
+   Brand palette is deliberately minimal (guideline p.13-14): Dark Sky Blue, Black, White.
+   No gradients, no secondary hues. Neutral grays and a small functional set are added below
+   as a documented SYSTEM EXTENSION so real UI (borders, muted text, form states) is buildable
+   — they never appear as decorative brand colour. */
+
+:root {
+  /* ---- Brand core ---- */
+  --sky-blue: #4C8BF5;          /* Dark Sky Blue — the one brand colour */
+  --black:    #000000;          /* Brand black (captions, on white) */
+  --white:    #FFFFFF;          /* Brand white (captions, on blue/photo) */
+
+  /* ---- Blue scale (tints/shades of the brand blue, for states + surfaces) ---- */
+  --blue-50:  #F5F8FF;
+  --blue-100: #EEF4FF;
+  --blue-200: #D9E6FE;
+  --blue-300: #A9C7FA;
+  --blue-400: #7AA6F8;
+  --blue-500: #4C8BF5;          /* = --sky-blue */
+  --blue-600: #3B78E0;          /* hover on blue actions */
+  --blue-700: #2E63C4;          /* pressed */
+  --blue-800: #244F9E;
+
+  /* ---- Neutral scale (cool, sits under the blue) — system extension ---- */
+  --ink-900:  #0E0E10;          /* primary text (softened black) */
+  --ink-800:  #22262E;
+  --ink-700:  #3A4049;
+  --ink-600:  #4A4F5A;          /* body text */
+  --ink-500:  #6B7280;          /* muted text */
+  --ink-400:  #8B929E;          /* faint text / icons */
+  --ink-300:  #C7CDD6;          /* disabled */
+  --ink-200:  #E4E6EA;          /* borders */
+  --ink-100:  #ECEEF1;          /* hairlines */
+  --ink-50:   #F5F6F8;          /* subtle surface */
+
+  /* ---- Functional (muted, system extension — NOT brand colour) ---- */
+  --success:  #1F8A5B;
+  --success-soft: #E6F4EC;
+  --error:    #E5484D;
+  --error-soft:   #FCEBEC;
+  --warning:  #C97C1E;
+  --warning-soft: #FBF0E1;
+
+  /* ===== Semantic aliases (use these in components) ===== */
+  --color-brand:        var(--sky-blue);
+  --color-brand-hover:  var(--blue-600);
+  --color-brand-press:  var(--blue-700);
+  --color-brand-tint:   var(--blue-100);
+  --color-brand-tint-2: var(--blue-50);
+
+  --text-strong:   var(--ink-900);
+  --text-body:     var(--ink-600);
+  --text-muted:    var(--ink-500);
+  --text-faint:    var(--ink-400);
+  --text-on-brand: var(--white);
+  --text-brand:    var(--sky-blue);
+  --text-disabled: var(--ink-300);
+
+  --surface-page:   var(--white);
+  --surface-brand:  var(--sky-blue);
+  --surface-card:   var(--white);
+  --surface-subtle: var(--blue-50);
+  --surface-ink:    var(--ink-900);
+
+  --border-subtle:  var(--ink-200);
+  --border-hairline: var(--ink-100);
+  --border-strong:  var(--ink-900);
+  --border-on-brand: rgba(255,255,255,0.55);
+
+  --focus-ring: rgba(76,139,245,0.45);
+}
