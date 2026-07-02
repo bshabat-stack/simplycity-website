@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/colors.css">
+<link rel="stylesheet" href="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/typography.css">
+<link rel="stylesheet" href="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/effects.css">
+<link rel="stylesheet" href="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/styles.css">
+<script src="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/_ds_bundle.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-sans);background:var(--white);color:var(--ink-900);-webkit-font-smoothing:antialiased;}
+  *{box-sizing:border-box;}
+  .sc-nav-drop{position:relative;padding-bottom:14px;margin-bottom:-14px;}
+  .sc-nav-trigger{display:inline-flex;align-items:center;gap:6px;background:none;border:none;padding:0;margin:0;font-family:var(--font-sans);font-weight:700;font-size:15px;color:var(--ink-800);cursor:pointer;}
+  .sc-nav-chevron{transition:transform 200ms var(--ease-out);}
+  .sc-nav-drop:hover .sc-nav-chevron,.sc-nav-drop.sc-open .sc-nav-chevron{transform:rotate(180deg);}
+  .sc-nav-panel{position:absolute;top:100%;left:50%;min-width:290px;background:#fff;border-radius:18px;box-shadow:var(--shadow-lg);padding:10px;opacity:0;visibility:hidden;transform:translate(-50%,-6px);pointer-events:none;transition:opacity 200ms var(--ease-out),transform 200ms var(--ease-out),visibility 200ms;}
+  .sc-nav-drop:hover .sc-nav-panel,.sc-nav-drop.sc-open .sc-nav-panel{opacity:1;visibility:visible;transform:translate(-50%,0);pointer-events:auto;}
+  .sc-nav-item{display:block;text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);padding:11px 16px;border-radius:12px;transition:background 120ms var(--ease-out),color 120ms var(--ease-out);}
+  .sc-nav-item:hover{background:var(--sky-blue);color:#fff !important;}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.86);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--border-hairline);">
+  <div style="max-width:1200px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
+    <a href="index.html" style="text-decoration:none;display:inline-flex;">
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Logo" tone="onLight" knockout="#fff" size="26" hint-size="132px,30px"></x-import>
+    </a>
+    <nav style="display:flex;align-items:center;gap:34px;">
+      <a href="index.html#how" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">How it works</a>
+      <div class="sc-nav-drop{{ scNavOpenClass }}" onmouseenter="{{ scNavOpen }}" onmouseleave="{{ scNavClose }}">
+        <button type="button" class="sc-nav-trigger" onclick="{{ scNavToggle }}">
+          Services
+          <i data-lucide="chevron-down" width="15" height="15" class="sc-nav-chevron"></i>
+        </button>
+        <div class="sc-nav-panel">
+          <a href="LocalSEOAgency.dc.html" class="sc-nav-item">Local SEO Agency</a>
+          <a href="LocalSEOForSmallBusiness.dc.html" class="sc-nav-item">Local SEO for Small Business</a>
+          <a href="GoogleBusinessProfileOptimization.dc.html" class="sc-nav-item">Google Business Profile Optimization</a>
+        </div>
+      </div>
+      <a href="index.html#features" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">Features</a>
+      <a href="Results.dc.html" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">Results</a>
+      <a href="Pricing.dc.html" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">Pricing</a>
+    </nav>
+    <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="primary" size="sm" hint-size="150px,40px">Get a free audit</x-import>
+  </div>
+</header>
+
+<section style="background:var(--white);padding:160px 0;">
+  <div style="max-width:900px;margin:0 auto;padding:0 40px;text-align:center;">
+    <h1 style="font-family:var(--font-sans);font-weight:800;font-size:56px;line-height:1;letter-spacing:-0.03em;color:var(--ink-900);margin:0;">Local SEO for Small Business</h1>
+  </div>
+</section>
+
+<footer style="background:var(--ink-900);padding:72px 0 40px;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px;">
+    <div style="display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;">
+      <div>
+        <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Logo" tone="onBrand" knockout="#0E0E10" size="28" hint-size="140px,32px"></x-import>
+        <p style="font-weight:500;font-size:15px;line-height:1.55;color:rgba(255,255,255,0.6);max-width:280px;margin:18px 0 0;">Bridging the gap between physical stores and the digital world.</p>
+      </div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">Product</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="index.html#features" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Features</a></li><li><a href="Results.dc.html" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Results</a></li><li><a href="Pricing.dc.html" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Pricing</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Free audit</a></li></ul></div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">Company</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">About</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Careers</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Blog</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Contact</a></li></ul></div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">Resources</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Local SEO guide</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Help center</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Privacy</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Terms</a></li></ul></div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.12);margin-top:48px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.5);">© 2026 SimplyCity. All rights reserved.</span>
+      <span style="display:flex;gap:18px;color:rgba(255,255,255,0.6);"><i data-lucide="mail" width="18" height="18"></i><i data-lucide="phone" width="18" height="18"></i><i data-lucide="map-pin" width="18" height="18"></i></span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.state = { servicesOpen: false };
+    this.scNavOpen = () => this.setState({ servicesOpen: true });
+    this.scNavClose = () => this.setState({ servicesOpen: false });
+    this.scNavToggle = () => this.setState(s => ({ servicesOpen: !s.servicesOpen }));
+  }
+  componentDidMount(){ this.paint(); }
+  componentDidUpdate(){ this.paint(); }
+  paint(){
+    const run = () => { if (window.lucide) window.lucide.createIcons(); };
+    run();
+    [120, 400, 900, 1600].forEach(t => setTimeout(run, t));
+  }
+  renderVals(){
+    return {
+      scNavOpenClass: this.state.servicesOpen ? ' sc-open' : '',
+      scNavOpen: this.scNavOpen, scNavClose: this.scNavClose, scNavToggle: this.scNavToggle
+    };
+  }
+}
+</script>
+</body>
+</html>

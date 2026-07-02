@@ -20,6 +20,14 @@
   html{scroll-behavior:smooth;}
   body{margin:0;font-family:var(--font-sans);background:var(--white);color:var(--ink-900);-webkit-font-smoothing:antialiased;}
   *{box-sizing:border-box;}
+  .sc-nav-drop{position:relative;padding-bottom:14px;margin-bottom:-14px;}
+  .sc-nav-trigger{display:inline-flex;align-items:center;gap:6px;background:none;border:none;padding:0;margin:0;font-family:var(--font-sans);font-weight:700;font-size:15px;color:var(--ink-800);cursor:pointer;}
+  .sc-nav-chevron{transition:transform 200ms var(--ease-out);}
+  .sc-nav-drop:hover .sc-nav-chevron,.sc-nav-drop.sc-open .sc-nav-chevron{transform:rotate(180deg);}
+  .sc-nav-panel{position:absolute;top:100%;left:50%;min-width:290px;background:#fff;border-radius:18px;box-shadow:var(--shadow-lg);padding:10px;opacity:0;visibility:hidden;transform:translate(-50%,-6px);pointer-events:none;transition:opacity 200ms var(--ease-out),transform 200ms var(--ease-out),visibility 200ms;}
+  .sc-nav-drop:hover .sc-nav-panel,.sc-nav-drop.sc-open .sc-nav-panel{opacity:1;visibility:visible;transform:translate(-50%,0);pointer-events:auto;}
+  .sc-nav-item{display:block;text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);padding:11px 16px;border-radius:12px;transition:background 120ms var(--ease-out),color 120ms var(--ease-out);}
+  .sc-nav-item:hover{background:var(--sky-blue);color:#fff !important;}
 </style>
 </helmet>
 
@@ -30,6 +38,17 @@
     </a>
     <nav style="display:flex;align-items:center;gap:34px;">
       <a href="index.html#how" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">How it works</a>
+      <div class="sc-nav-drop{{ scNavOpenClass }}" onmouseenter="{{ scNavOpen }}" onmouseleave="{{ scNavClose }}">
+        <button type="button" class="sc-nav-trigger" onclick="{{ scNavToggle }}">
+          Services
+          <i data-lucide="chevron-down" width="15" height="15" class="sc-nav-chevron"></i>
+        </button>
+        <div class="sc-nav-panel">
+          <a href="LocalSEOAgency.dc.html" class="sc-nav-item">Local SEO Agency</a>
+          <a href="LocalSEOForSmallBusiness.dc.html" class="sc-nav-item">Local SEO for Small Business</a>
+          <a href="GoogleBusinessProfileOptimization.dc.html" class="sc-nav-item">Google Business Profile Optimization</a>
+        </div>
+      </div>
       <a href="index.html#features" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">Features</a>
       <a href="Results.dc.html" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">Results</a>
       <a href="Pricing.dc.html" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--sky-blue);">Pricing</a>
@@ -143,6 +162,13 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.state = { servicesOpen: false };
+    this.scNavOpen = () => this.setState({ servicesOpen: true });
+    this.scNavClose = () => this.setState({ servicesOpen: false });
+    this.scNavToggle = () => this.setState(s => ({ servicesOpen: !s.servicesOpen }));
+  }
   componentDidMount(){ this.paint(); }
   componentDidUpdate(){ this.paint(); }
   paint(){
@@ -152,6 +178,8 @@ class Component extends DCLogic {
   }
   renderVals(){
     return {
+      scNavOpenClass: this.state.servicesOpen ? ' sc-open' : '',
+      scNavOpen: this.scNavOpen, scNavClose: this.scNavClose, scNavToggle: this.scNavToggle,
       faqProps: { items: [
         { q: "Is there a contract?", a: "No. Every plan is month-to-month. Stay because it works, not because you're locked in." },
         { q: "How fast will I see results?", a: "Most businesses see movement in the local pack within 4\u20138 weeks. Competitive categories take a little longer \u2014 your monthly report shows exactly where you stand." },
