@@ -32,6 +32,8 @@
   .sc-nav-item:hover{background:var(--sky-blue);color:#fff !important;}
   .sc-article a{color:var(--sky-blue);font-weight:700;text-decoration:none;border-bottom:1px solid var(--blue-300);}
   .sc-article a:hover{border-color:var(--sky-blue);}
+  .sc-blog-card{text-decoration:none;background:#fff;border-radius:22px;box-shadow:var(--shadow-md);overflow:hidden;display:flex;flex-direction:column;transition:transform 150ms var(--ease-out),box-shadow 150ms var(--ease-out);}
+  .sc-blog-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
 </style>
 </helmet>
 
@@ -50,7 +52,7 @@
         <div class="sc-nav-panel">
           <a href="LocalSEOAgency.dc.html" class="sc-nav-item">Local SEO Agency</a>
           <a href="LocalSEOForSmallBusiness.dc.html" class="sc-nav-item">Local SEO for Small Business</a>
-          <a href="GoogleBusinessProfileOptimization.dc.html" class="sc-nav-item" style="color:var(--sky-blue) !important;">Google Business Profile Optimization</a>
+          <a href="GoogleBusinessProfileOptimization.dc.html" class="sc-nav-item">Google Business Profile Optimization</a>
         </div>
       </div>
       <a href="index.html#features" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">Features</a>
@@ -61,12 +63,61 @@
   </div>
 </header>
 
-<section style="background:var(--white);padding:88px 0 0;">
-  <div style="max-width:860px;margin:0 auto;padding:0 40px;text-align:center;">
-    <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Eyebrow" tone="brand" hint-size="120px,16px">Google Business Profile</x-import>
-    <h1 style="font-family:var(--font-sans);font-weight:800;font-size:46px;line-height:1.05;letter-spacing:-0.03em;color:var(--ink-900);margin:18px 0 0;">Google Business Profile Optimization, Done For You — With the Process Published</h1>
-    <p style="font-family:var(--font-sans);font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--text-muted);margin:16px 0 0;">Last updated: July 2026 · By the team managing 200+ local business profiles</p>
-    <p style="font-family:var(--font-sans);font-weight:500;font-size:19px;line-height:1.6;color:var(--text-body);margin:20px auto 0;max-width:660px;">Google Business Profile optimization is the highest-leverage work in local SEO: your category, reviews, services, photos, and linked landing page decide whether you appear in the Google Map Pack. SimplyCity manages all of it for $100–$150/month — and unlike most agencies, we publish the exact process below.</p>
+<section style="background:var(--white);padding:80px 0 88px;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center;">
+    <div>
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Eyebrow" tone="brand" hint-size="120px,16px">Google Business Profile</x-import>
+      <h1 style="font-family:var(--font-sans);font-weight:800;font-size:40px;line-height:1.08;letter-spacing:-0.03em;color:var(--ink-900);margin:18px 0 0;">Google Business Profile Optimization, Done For You — With the Process Published</h1>
+      <p style="font-family:var(--font-sans);font-weight:700;font-size:13px;letter-spacing:.04em;color:var(--text-muted);margin:16px 0 0;">Last updated: July 2026 · By the team managing 200+ local business profiles</p>
+      <p style="font-family:var(--font-sans);font-weight:500;font-size:19px;line-height:1.6;color:var(--text-body);margin:20px 0 0;max-width:520px;">Google Business Profile optimization is the highest-leverage work in local SEO: your category, reviews, services, photos, and linked landing page decide whether you appear in the Google Map Pack. SimplyCity manages all of it for $100–$150/month — and unlike most agencies, we publish the exact process below.</p>
+      <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
+        <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="primary" size="lg" hint-size="220px,58px">Claim your free audit</x-import>
+        <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="ghost" size="lg" as="a" href="#plans" hint-size="150px,58px">See packages</x-import>
+      </div>
+    </div>
+
+    <div style="justify-self:end;width:100%;max-width:480px;background:var(--sky-blue);border-radius:28px;box-shadow:var(--shadow-brand);padding:36px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-120px;right:-120px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,0.08);"></div>
+      <div style="position:relative;background:#fff;border-radius:24px;box-shadow:var(--shadow-xl);padding:24px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;"><div style="font-weight:800;font-size:16px;color:var(--ink-900);">Profile health</div><span style="font-weight:800;font-size:13px;color:var(--success);background:var(--success-soft);border-radius:999px;padding:6px 12px;">100% complete</span></div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div><div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:var(--ink-800);margin-bottom:6px;"><span>Business info</span><span style="color:var(--success);">Done</span></div><div style="height:8px;border-radius:99px;background:var(--blue-100);"><div style="height:8px;border-radius:99px;background:var(--sky-blue);width:100%;"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:var(--ink-800);margin-bottom:6px;"><span>Photos (34)</span><span style="color:var(--success);">Done</span></div><div style="height:8px;border-radius:99px;background:var(--blue-100);"><div style="height:8px;border-radius:99px;background:var(--sky-blue);width:100%;"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:var(--ink-800);margin-bottom:6px;"><span>Weekly posts</span><span style="color:var(--sky-blue);">3 scheduled</span></div><div style="height:8px;border-radius:99px;background:var(--blue-100);"><div style="height:8px;border-radius:99px;background:var(--sky-blue);width:82%;"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:13px;font-weight:700;color:var(--ink-800);margin-bottom:6px;"><span>Q&amp;A answered</span><span style="color:var(--success);">Done</span></div><div style="height:8px;border-radius:99px;background:var(--blue-100);"><div style="height:8px;border-radius:99px;background:var(--sky-blue);width:100%;"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white);padding:44px 0;border-top:1px solid var(--border-hairline);border-bottom:1px solid var(--border-hairline);">
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px;">
+    <p style="text-align:center;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-faint);margin:0 0 26px;">Trusted by 640+ local businesses across the country</p>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;opacity:0.85;">
+      <span style="font-weight:900;font-size:22px;letter-spacing:-0.02em;color:var(--ink-400);">Corner&nbsp;Bakery</span>
+      <span style="font-weight:900;font-size:22px;letter-spacing:-0.02em;color:var(--ink-400);display:inline-flex;align-items:center;gap:6px;"><i data-lucide="wrench" width="20" height="20"></i>Metro&nbsp;Plumbing</span>
+      <span style="font-weight:900;font-size:22px;letter-spacing:-0.02em;color:var(--ink-400);">BrightSmile</span>
+      <span style="font-weight:900;font-size:22px;letter-spacing:-0.02em;color:var(--ink-400);display:inline-flex;align-items:center;gap:6px;"><i data-lucide="scissors" width="20" height="20"></i>Fade&nbsp;&amp;&nbsp;Co</span>
+      <span style="font-weight:900;font-size:22px;letter-spacing:-0.02em;color:var(--ink-400);">Green&nbsp;Thumb</span>
+      <span style="font-weight:900;font-size:22px;letter-spacing:-0.02em;color:var(--ink-400);display:inline-flex;align-items:center;gap:6px;"><i data-lucide="utensils" width="20" height="20"></i>Trattoria&nbsp;9</span>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--sky-blue);padding:96px 0;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-160px;right:-140px;width:460px;height:460px;border-radius:50%;background:rgba(255,255,255,0.07);"></div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px;position:relative;">
+    <div style="text-align:center;max-width:680px;margin:0 auto 64px;">
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Eyebrow" tone="onBrand" hint-size="160px,16px">Proven outcomes</x-import>
+      <h2 style="font-family:var(--font-sans);font-weight:800;font-size:44px;line-height:1.04;letter-spacing:-0.03em;color:#fff;margin:16px 0 0;">What businesses achieve with SimplyCity.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center;">
+      <div><div style="font-weight:900;font-size:56px;line-height:1;letter-spacing:-0.03em;color:#fff;">+30%</div><div style="font-weight:600;font-size:15px;color:rgba(255,255,255,0.85);margin-top:10px;">search visibility</div></div>
+      <div style="border-left:1px solid rgba(255,255,255,0.22);"><div style="font-weight:900;font-size:56px;line-height:1;letter-spacing:-0.03em;color:#fff;">3.2×</div><div style="font-weight:600;font-size:15px;color:rgba(255,255,255,0.85);margin-top:10px;">more map calls</div></div>
+      <div style="border-left:1px solid rgba(255,255,255,0.22);"><div style="font-weight:900;font-size:56px;line-height:1;letter-spacing:-0.03em;color:#fff;">+35%</div><div style="font-weight:600;font-size:15px;color:rgba(255,255,255,0.85);margin-top:10px;">revenue from local</div></div>
+      <div style="border-left:1px solid rgba(255,255,255,0.22);"><div style="font-weight:900;font-size:56px;line-height:1;letter-spacing:-0.03em;color:#fff;">#1</div><div style="font-weight:600;font-size:15px;color:rgba(255,255,255,0.85);margin-top:10px;">average local rank</div></div>
+    </div>
   </div>
 </section>
 
@@ -83,19 +134,19 @@
       <h2 style="font-family:var(--font-sans);font-weight:800;font-size:36px;line-height:1.1;letter-spacing:-0.02em;color:var(--ink-900);margin:0 0 20px;">Results from real profiles we manage</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-      
+
       <div style="background:#fff;border-radius:24px;box-shadow:var(--shadow-md);padding:32px;">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;"><span style="width:40px;height:40px;border-radius:12px;background:var(--blue-100);color:var(--sky-blue);display:flex;align-items:center;justify-content:center;"><i data-lucide="scissors" width="20" height="20"></i></span><div><div style="font-weight:800;font-size:15px;color:var(--ink-900);">Salon Cut n’Color</div><div style="font-weight:600;font-size:13px;color:var(--text-muted);">Beauty salon · Barcelona</div></div></div>
         <div style="font-weight:900;font-size:38px;line-height:1;letter-spacing:-0.03em;color:var(--sky-blue);">+3,039%</div>
         <div style="font-weight:700;font-size:14px;color:var(--text-muted);margin:6px 0 18px;">profile visibility</div>
-        <p style="font-weight:500;font-size:15px;line-height:1.55;color:var(--ink-800);margin:0;">#1 in a 2 km radius for “hair salon” — 814 route requests and 228 calls in the tracked period.</p>
+        <p style="font-weight:500;font-size:15px;line-height:1.55;color:var(--ink-800);margin:0;">#1 in a 2 km radius for “hair salon” — 814 route requests and 228 calls in the tracked period.</p>
       </div>
 
       <div style="background:#fff;border-radius:24px;box-shadow:var(--shadow-md);padding:32px;">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;"><span style="width:40px;height:40px;border-radius:12px;background:var(--blue-100);color:var(--sky-blue);display:flex;align-items:center;justify-content:center;"><i data-lucide="shopping-basket" width="20" height="20"></i></span><div><div style="font-weight:800;font-size:15px;color:var(--ink-900);">La Salumeria</div><div style="font-weight:600;font-size:13px;color:var(--text-muted);">Italian grocery · Barcelona</div></div></div>
         <div style="font-weight:900;font-size:38px;line-height:1;letter-spacing:-0.03em;color:var(--sky-blue);">+66.1%</div>
         <div style="font-weight:700;font-size:14px;color:var(--text-muted);margin:6px 0 18px;">profile visibility</div>
-        <p style="font-weight:500;font-size:15px;line-height:1.55;color:var(--ink-800);margin:0;">Direction requests up 15.3%. #1 in a 5 km radius for “charcuter&iacute;a italiana” and “guanciale.”</p>
+        <p style="font-weight:500;font-size:15px;line-height:1.55;color:var(--ink-800);margin:0;">Direction requests up 15.3%. #1 in a 5 km radius for “charcuter&iacute;a italiana” and “guanciale.”</p>
       </div>
 
       <div style="background:#fff;border-radius:24px;box-shadow:var(--shadow-md);padding:32px;">
@@ -188,6 +239,122 @@
   </div>
 </section>
 
+<section id="plans" style="background:var(--surface-subtle);padding:112px 0;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px;">
+    <div style="text-align:center;max-width:640px;margin:0 auto 72px;">
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Eyebrow" tone="brand" hint-size="150px,16px">Payment plans</x-import>
+      <h2 style="font-family:var(--font-sans);font-weight:800;font-size:44px;line-height:1.04;letter-spacing:-0.03em;color:var(--ink-900);margin:16px 0 16px;">Simple plans. No lock-in.</h2>
+      <p style="font-family:var(--font-sans);font-weight:500;font-size:19px;line-height:1.55;color:var(--text-body);margin:0;">One flat monthly fee. Everything done for you. Cancel any time — most owners never do.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div style="background:#fff;border-radius:28px;box-shadow:var(--shadow-lg);padding:36px;display:flex;flex-direction:column;">
+        <div style="font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-blue);">Starter</div>
+        <div style="font-weight:500;font-size:15px;color:var(--text-muted);margin:6px 0 20px;">For a single location finding its feet.</div>
+        <div style="display:flex;align-items:baseline;gap:6px;"><span style="font-weight:900;font-size:52px;letter-spacing:-0.03em;color:var(--ink-900);">$199</span><span style="font-weight:600;font-size:16px;color:var(--text-muted);">/mo</span></div>
+        <div style="margin:28px 0;">
+          <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="ghost" size="md" block="true" hint-size="100%,52px">Start with Starter</x-import>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:13px;">
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:var(--ink-800);"><i data-lucide="check" width="18" height="18" style="color:var(--success);flex:none;margin-top:1px;"></i> Google Business Profile setup &amp; monthly tuning</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:var(--ink-800);"><i data-lucide="check" width="18" height="18" style="color:var(--success);flex:none;margin-top:1px;"></i> Listings synced across 20+ directories</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:var(--ink-800);"><i data-lucide="check" width="18" height="18" style="color:var(--success);flex:none;margin-top:1px;"></i> Monthly rank report</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:var(--ink-800);"><i data-lucide="check" width="18" height="18" style="color:var(--success);flex:none;margin-top:1px;"></i> Email support</div>
+        </div>
+      </div>
+
+      <div style="background:var(--sky-blue);border-radius:28px;box-shadow:var(--shadow-brand);padding:36px;display:flex;flex-direction:column;position:relative;transform:translateY(-16px);">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#fff;color:var(--sky-blue);font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:6px 16px;box-shadow:var(--shadow-sm);">Most popular</div>
+        <div style="font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.85);">Growth</div>
+        <div style="font-weight:500;font-size:15px;color:rgba(255,255,255,0.85);margin:6px 0 20px;">For businesses ready to own the map pack.</div>
+        <div style="display:flex;align-items:baseline;gap:6px;"><span style="font-weight:900;font-size:52px;letter-spacing:-0.03em;color:#fff;">$399</span><span style="font-weight:600;font-size:16px;color:rgba(255,255,255,0.85);">/mo</span></div>
+        <div style="margin:28px 0;">
+          <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="onBrand" size="md" block="true" hint-size="100%,52px">Start with Growth</x-import>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:13px;">
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:#fff;"><i data-lucide="check" width="18" height="18" style="color:#fff;flex:none;margin-top:1px;"></i> Everything in Starter</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:#fff;"><i data-lucide="check" width="18" height="18" style="color:#fff;flex:none;margin-top:1px;"></i> Review generation &amp; done-for-you replies</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:#fff;"><i data-lucide="check" width="18" height="18" style="color:#fff;flex:none;margin-top:1px;"></i> Weekly Google posts &amp; fresh photos</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:#fff;"><i data-lucide="check" width="18" height="18" style="color:#fff;flex:none;margin-top:1px;"></i> 40+ directory sync &amp; cleanup</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:#fff;"><i data-lucide="check" width="18" height="18" style="color:#fff;flex:none;margin-top:1px;"></i> Priority chat support</div>
+        </div>
+      </div>
+
+      <div style="background:#fff;border-radius:28px;box-shadow:var(--shadow-lg);padding:36px;display:flex;flex-direction:column;">
+        <div style="font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-blue);">Pro</div>
+        <div style="font-weight:500;font-size:15px;color:var(--text-muted);margin:6px 0 20px;">For multi-location &amp; competitive markets.</div>
+        <div style="display:flex;align-items:baseline;gap:6px;"><span style="font-weight:900;font-size:52px;letter-spacing:-0.03em;color:var(--ink-900);">$699</span><span style="font-weight:600;font-size:16px;color:var(--text-muted);">/mo</span></div>
+        <div style="margin:28px 0;">
+          <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="ghost" size="md" block="true" hint-size="100%,52px">Talk to sales</x-import>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:13px;">
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:var(--ink-800);"><i data-lucide="check" width="18" height="18" style="color:var(--success);flex:none;margin-top:1px;"></i> Everything in Growth</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:var(--ink-800);"><i data-lucide="check" width="18" height="18" style="color:var(--success);flex:none;margin-top:1px;"></i> Up to 5 locations managed</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:var(--ink-800);"><i data-lucide="check" width="18" height="18" style="color:var(--success);flex:none;margin-top:1px;"></i> Competitor rank tracking</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;font-weight:600;font-size:15px;color:var(--ink-800);"><i data-lucide="check" width="18" height="18" style="color:var(--success);flex:none;margin-top:1px;"></i> Dedicated local strategist</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;font-weight:600;font-size:15px;color:var(--text-muted);margin:44px 0 0;display:flex;align-items:center;justify-content:center;gap:8px;"><i data-lucide="shield-check" width="18" height="18" style="color:var(--success);"></i> 30-day results guarantee · No setup fee · No contract</p>
+    <p style="text-align:center;margin:18px 0 0;"><a href="Pricing.dc.html" style="text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--sky-blue);">Compare full plan details <i data-lucide="arrow-right" width="16" height="16"></i></a></p>
+  </div>
+</section>
+
+<section style="background:var(--white);padding:112px 0;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px;">
+    <div style="text-align:center;max-width:600px;margin:0 auto 56px;">
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Eyebrow" tone="brand" hint-size="130px,16px">Loved locally</x-import>
+      <h2 style="font-family:var(--font-sans);font-weight:800;font-size:44px;line-height:1.04;letter-spacing:-0.03em;color:var(--ink-900);margin:16px 0 0;">Owners who stopped worrying about Google.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:22px;box-shadow:var(--shadow-md);padding:26px;"><div style="display:flex;gap:2px;color:var(--sky-blue);margin-bottom:14px;"><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i></div><p style="font-weight:600;font-size:16px;line-height:1.5;color:var(--ink-800);margin:0 0 18px;">"We show up first for every service we offer now. Booked out three weeks ahead."</p><div style="display:flex;align-items:center;gap:12px;"><span style="width:40px;height:40px;border-radius:50%;background:var(--blue-200);color:var(--sky-blue);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;">TC</span><div><div style="font-weight:700;font-size:14px;color:var(--ink-900);">Tom Casey</div><div style="font-weight:600;font-size:13px;color:var(--text-muted);">Casey Electrical</div></div></div></div>
+      <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:22px;box-shadow:var(--shadow-md);padding:26px;"><div style="display:flex;gap:2px;color:var(--sky-blue);margin-bottom:14px;"><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i></div><p style="font-weight:600;font-size:16px;line-height:1.5;color:var(--ink-800);margin:0 0 18px;">"The review replies alone changed our rating. Went from 4.2 to 4.9 in a season."</p><div style="display:flex;align-items:center;gap:12px;"><span style="width:40px;height:40px;border-radius:50%;background:var(--blue-300);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;">MG</span><div><div style="font-weight:700;font-size:14px;color:var(--ink-900);">Maria Gómez</div><div style="font-weight:600;font-size:13px;color:var(--text-muted);">Sol Salon</div></div></div></div>
+      <div style="background:#fff;border:1px solid var(--border-hairline);border-radius:22px;box-shadow:var(--shadow-md);padding:26px;"><div style="display:flex;gap:2px;color:var(--sky-blue);margin-bottom:14px;"><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i><i data-lucide="star" width="16" height="16"></i></div><p style="font-weight:600;font-size:16px;line-height:1.5;color:var(--ink-800);margin:0 0 18px;">"Simple monthly plan, no contract, and my calls doubled. Easy decision to stay."</p><div style="display:flex;align-items:center;gap:12px;"><span style="width:40px;height:40px;border-radius:50%;background:var(--sky-blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;">SB</span><div><div style="font-weight:700;font-size:14px;color:var(--ink-900);">Sam Boyd</div><div style="font-weight:600;font-size:13px;color:var(--text-muted);">Boyd &amp; Sons Roofing</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface-subtle);padding:112px 0;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px;">
+    <div style="text-align:center;max-width:600px;margin:0 auto 56px;">
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Eyebrow" tone="brand" hint-size="140px,16px">From the blog</x-import>
+      <h2 style="font-family:var(--font-sans);font-weight:800;font-size:44px;line-height:1.04;letter-spacing:-0.03em;color:var(--ink-900);margin:16px 0 0;">Keep learning local SEO.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <a href="LocalSEOForSmallBusiness.dc.html" class="sc-blog-card">
+        <div style="background:var(--blue-100);height:150px;display:flex;align-items:center;justify-content:center;color:var(--sky-blue);"><i data-lucide="book-open" width="44" height="44"></i></div>
+        <div style="padding:26px;display:flex;flex-direction:column;gap:10px;flex:1;">
+          <span style="display:inline-flex;align-self:flex-start;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-blue);background:var(--blue-50);border-radius:999px;padding:5px 12px;">Guide</span>
+          <div style="font-weight:800;font-size:19px;line-height:1.3;color:var(--ink-900);">Local SEO for Small Business: The Owner's Guide</div>
+          <p style="font-weight:500;font-size:15px;line-height:1.55;color:var(--text-body);margin:0;">What actually moves Google Maps rankings, what to do yourself, and what it costs.</p>
+          <span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--sky-blue);">Read more <i data-lucide="arrow-right" width="16" height="16"></i></span>
+        </div>
+      </a>
+      <a href="LocalSEOAgency.dc.html" class="sc-blog-card">
+        <div style="background:var(--blue-100);height:150px;display:flex;align-items:center;justify-content:center;color:var(--sky-blue);"><i data-lucide="map-pin" width="44" height="44"></i></div>
+        <div style="padding:26px;display:flex;flex-direction:column;gap:10px;flex:1;">
+          <span style="display:inline-flex;align-self:flex-start;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-blue);background:var(--blue-50);border-radius:999px;padding:5px 12px;">Services</span>
+          <div style="font-weight:800;font-size:19px;line-height:1.3;color:var(--ink-900);">What a Local SEO Agency Actually Does</div>
+          <p style="font-weight:500;font-size:15px;line-height:1.55;color:var(--text-body);margin:0;">GBP, citations, reviews, and rank tracking — the four services that move local rankings.</p>
+          <span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--sky-blue);">Read more <i data-lucide="arrow-right" width="16" height="16"></i></span>
+        </div>
+      </a>
+      <a href="Results.dc.html" class="sc-blog-card">
+        <div style="background:var(--blue-100);height:150px;display:flex;align-items:center;justify-content:center;color:var(--sky-blue);"><i data-lucide="trending-up" width="44" height="44"></i></div>
+        <div style="padding:26px;display:flex;flex-direction:column;gap:10px;flex:1;">
+          <span style="display:inline-flex;align-self:flex-start;font-weight:800;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-blue);background:var(--blue-50);border-radius:999px;padding:5px 12px;">Results</span>
+          <div style="font-weight:800;font-size:19px;line-height:1.3;color:var(--ink-900);">Real Businesses, Real Climbs</div>
+          <p style="font-weight:500;font-size:15px;line-height:1.55;color:var(--text-body);margin:0;">Tracked outcomes from profiles on our monthly management — visibility, calls, and Map Pack ranks.</p>
+          <span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:var(--sky-blue);">Read more <i data-lucide="arrow-right" width="16" height="16"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
 <section style="background:var(--white);padding:96px 0 88px;">
   <div style="max-width:820px;margin:0 auto;padding:0 40px;">
     <div style="text-align:center;margin-bottom:44px;">
@@ -204,7 +371,7 @@
     <h2 style="font-family:var(--font-sans);font-weight:800;font-size:44px;line-height:1.05;letter-spacing:-0.03em;color:#fff;margin:0;">Get a free audit of your profile</h2>
     <p style="font-family:var(--font-sans);font-weight:500;font-size:19px;line-height:1.5;color:rgba(255,255,255,0.9);margin:18px auto 32px;max-width:540px;">Send us your business name and we'll audit your Google Business Profile against the seven steps above — what's strong, what's missing, and what we'd fix in the first 30 days. No charge, no obligation.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="onBrand" size="lg" hint-size="220px,58px">Claim your free audit  <i data-lucide="arrow-right" width="18" height="18"></i></x-import>
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="onBrand" size="lg" hint-size="220px,58px">Claim your free audit  <i data-lucide="arrow-right" width="18" height="18"></i></x-import>
     </div>
   </div>
 </section>
@@ -258,7 +425,7 @@ class Component extends DCLogic {
         },
         {
                 "q": "How long does it take to see results from GBP optimization?",
-                "a": "Measurable movement typically appears within 4–8 weeks: more profile views, direction requests, and calls. Competitive Map Pack rankings can take longer depending on your market. One of our clients, an Italian grocery store in Barcelona, grew profile visibility 66% and direction requests 15% over a tracked period, reaching #1 in a 5 km radius for two category keywords."
+                "a": "Measurable movement typically appears within 4–8 weeks: more profile views, direction requests, and calls. Competitive Map Pack rankings can take longer depending on your market. One of our clients, an Italian grocery store in Barcelona, grew profile visibility 66% and direction requests 15% over a tracked period, reaching #1 in a 5 km radius for two category keywords."
         },
         {
                 "q": "What matters most for ranking in the Google Map Pack?",
