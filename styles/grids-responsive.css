@@ -1,0 +1,28 @@
+* { min-width: 0; }
+img, svg, video { max-width: 100%; height: auto; }
+
+.feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; max-width:1120px; margin:0 auto; padding:0 1.25rem; }
+@media (min-width:1140px){ .feature-grid { grid-template-columns:repeat(4,1fr); } }
+
+.feature-split { display:grid; grid-template-columns:1fr; gap:2rem; align-items:center; max-width:1120px; margin:0 auto; padding:2.5rem 1.25rem; }
+@media (min-width:768px){ .feature-split { grid-template-columns:1fr 1fr; gap:3.5rem; padding:4rem 2rem; } }
+.feature-split__visual { order:2; }
+@media (min-width:768px){ .feature-split__visual { order:0; } }
+
+.testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; max-width:1120px; margin:0 auto; padding:0 1.25rem; }
+
+.site-footer__cols { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:2rem; max-width:1200px; margin:0 auto; padding:3rem 1.25rem; }
+.site-footer__brand { grid-column:1 / -1; }
+@media (min-width:700px){ .site-footer__cols { grid-template-columns:1.4fr repeat(3,1fr); } .site-footer__brand { grid-column:auto; } }
+
+@media (max-width:767px){ .feature-split, .testimonial-grid, .feature-grid { padding-top:2rem; padding-bottom:2rem; } }
+
+/* Homepage grids not covered by the shared hooks: the blue stats band and the customer-stories grid. */
+.stat-band { display:grid; grid-template-columns:repeat(2,1fr); gap:32px; text-align:center; }
+.stat-band__value { font-weight:900; font-size:clamp(2.25rem,10vw,3.5rem); line-height:1; letter-spacing:-0.03em; color:#fff; }
+@media (max-width:767px){ .stat-band > div { border-left:0 !important; } }
+@media (min-width:768px){ .stat-band { grid-template-columns:repeat(4,1fr); } }
+
+.stories-grid { display:grid; grid-template-columns:1fr; gap:24px; }
+@media (min-width:900px){ .stories-grid { grid-template-columns:1.5fr 1fr; } }
+.story-figure { font-weight:900; font-size:clamp(3rem,17vw,5.5rem); line-height:0.9; letter-spacing:-0.04em; color:#fff; }

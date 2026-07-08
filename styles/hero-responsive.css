@@ -1,0 +1,22 @@
+.hero { background:#3f7ff2; color:#fff; overflow:hidden; }
+.hero__grid { display:grid; grid-template-columns:1fr; gap:2rem; align-items:center; width:100%; max-width:1200px; margin:0 auto; padding:3rem 1.25rem 3.5rem; box-sizing:border-box; }
+.hero__eyebrow { display:inline-block; font-size:.8125rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fff; margin-bottom:1rem; }
+.hero__title { font-size:clamp(2.25rem,9vw,4.125rem); line-height:1.02; font-weight:800; margin:0 0 1.25rem; text-wrap:balance; }
+.hero__lead { font-size:clamp(1rem,4.2vw,1.25rem); line-height:1.5; color:#fff; max-width:34ch; margin:0 0 2rem; }
+.hero__actions { display:flex; flex-direction:column; gap:.75rem; width:100%; }
+.hero__btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; min-height:52px; padding:0 1.5rem; border-radius:999px; font-size:1.0625rem; font-weight:700; text-decoration:none; width:100%; }
+.hero__btn--primary { background:#fff; color:#1f4fd0; }
+.hero__btn--ghost { background:transparent; color:#fff; border:2px solid rgba(255,255,255,.7); }
+.hero__visual { width:100%; max-width:460px; margin:0 auto; }
+.hero__visual :is(.ranking-card,.sc-card) { width:100%; box-sizing:border-box; }
+
+@media (min-width:768px){
+  .hero__grid { grid-template-columns:1.05fr .95fr; gap:3rem; padding:4.5rem 2rem 5rem; }
+  .hero__actions { flex-direction:row; }
+  .hero__btn { width:auto; }
+  .hero__visual { margin:0; max-width:none; }
+}
+
+@media (min-width:1024px){ .hero__grid { padding:6rem 2.5rem; gap:4rem; } }
+
+@media (prefers-reduced-motion:reduce){ .hero, .hero * { animation:none !important; transition:none !important; } }
