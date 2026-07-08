@@ -1,0 +1,60 @@
+/* Free-audit lead capture page. Single column throughout; inputs and the submit
+   button stay comfortably above the 44px tap-target floor on small screens. */
+
+.audit-hero { background:var(--sky-blue); color:#fff; padding:3.5rem 1.25rem 6.5rem; }
+.audit-hero__inner { max-width:640px; margin:0 auto; text-align:center; }
+.audit-hero__title { font-size:clamp(2.25rem,8vw,3.5rem); line-height:1.02; font-weight:800; letter-spacing:-0.03em; margin:1rem 0 0; text-wrap:balance; }
+.audit-hero__pill { font-style:italic; background:#fff; color:var(--sky-blue); border-radius:999px; padding:0 .26em .05em; display:inline-block; }
+.audit-hero__lead { font-size:clamp(1rem,4.2vw,1.1875rem); line-height:1.55; font-weight:500; color:rgba(255,255,255,0.92); max-width:46ch; margin:1.25rem auto 0; }
+
+.audit-main { background:var(--surface-subtle); padding:0 1.25rem 4.5rem; }
+.audit-card { max-width:600px; margin:-4rem auto 0; background:var(--surface-card); border-radius:28px; box-shadow:var(--shadow-xl); padding:1.75rem 1.25rem; }
+
+.audit-form { display:flex; flex-direction:column; gap:1.125rem; }
+
+/* Honeypot — visually removed, ignored by keyboard and assistive tech. Real
+   visitors never see it; anything typed here marks the submission as spam. */
+.audit-hp { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+
+.audit-field { display:flex; flex-direction:column; gap:7px; }
+.audit-label { font-weight:700; font-size:.9375rem; color:var(--text-strong); }
+.audit-label__optional { font-weight:600; color:var(--text-muted); }
+.audit-input { width:100%; min-height:52px; font-family:var(--font-sans); font-weight:500; font-size:1rem; color:var(--text-strong); background:var(--white); border:2px solid var(--border-subtle); border-radius:16px; padding:13px 16px; outline:none; transition:border-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out); }
+.audit-input::placeholder { color:var(--text-faint); font-weight:500; }
+.audit-input:hover { border-color:var(--ink-300); }
+.audit-input:focus { border-color:var(--color-brand); box-shadow:0 0 0 4px var(--focus-ring); }
+
+.audit-field.is-invalid .audit-input { border-color:var(--error); }
+.audit-field.is-invalid .audit-input:focus { box-shadow:0 0 0 4px var(--error-soft); }
+.audit-error { display:none; font-weight:600; font-size:.8125rem; color:var(--error); margin:0; }
+.audit-field.is-invalid .audit-error { display:block; }
+
+.audit-form-error { font-weight:600; font-size:.9375rem; line-height:1.45; color:var(--error); background:var(--error-soft); border-radius:14px; padding:.85rem 1rem; margin:0; }
+
+.audit-submit { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; width:100%; min-height:56px; padding:0 1.75rem; border:0; border-radius:999px; background:var(--color-brand); color:var(--text-on-brand); font-family:var(--font-sans); font-weight:700; font-size:1.0625rem; cursor:pointer; transition:background 160ms var(--ease-out), transform 120ms var(--ease-out); }
+.audit-submit:hover { background:var(--color-brand-hover); }
+.audit-submit:active { background:var(--color-brand-press); transform:scale(0.97); }
+.audit-submit:focus-visible { outline:none; box-shadow:0 0 0 4px var(--focus-ring); }
+.audit-submit:disabled { opacity:.6; cursor:default; transform:none; }
+
+.audit-note { font-weight:500; font-size:.8125rem; color:var(--text-muted); text-align:center; margin:0; }
+
+.audit-success { text-align:center; padding:1.5rem 0; outline:none; }
+.audit-success__icon { display:inline-flex; align-items:center; justify-content:center; width:64px; height:64px; border-radius:50%; background:var(--success-soft); color:var(--success); margin-bottom:1.125rem; }
+.audit-success__title { font-weight:800; font-size:1.5rem; line-height:1.15; letter-spacing:-0.02em; color:var(--ink-900); margin:0 0 .75rem; text-wrap:balance; }
+.audit-success__text { font-weight:500; font-size:1rem; line-height:1.55; color:var(--text-body); max-width:40ch; margin:0 auto 1.25rem; }
+.audit-success__link { display:inline-flex; align-items:center; gap:.5rem; min-height:44px; font-weight:700; font-size:.9375rem; color:var(--sky-blue); text-decoration:none; }
+
+.audit-reassure { display:flex; flex-direction:column; gap:.75rem; align-items:center; max-width:600px; margin:1.75rem auto 0; }
+.audit-reassure__item { display:inline-flex; align-items:center; gap:.5rem; font-weight:600; font-size:.875rem; color:var(--text-body); }
+.audit-reassure__item svg { color:var(--success); flex:none; }
+
+.is-hidden { display:none !important; }
+
+@media (min-width:768px) {
+  .audit-hero { padding:5rem 2rem 7.5rem; }
+  .audit-card { padding:2.5rem; }
+  .audit-reassure { flex-direction:row; justify-content:center; gap:2.25rem; }
+}
+
+@media (prefers-reduced-motion:reduce) { .audit-input, .audit-submit { transition:none !important; } }

@@ -52,7 +52,7 @@
       <a href="#features">Features</a>
       <a href="/results">Results</a>
       <a href="/local-seo-pricing">Pricing</a>
-      <a class="site-nav__cta" href="/free-audit">Get a free audit</a>
+      <a class="site-nav__cta" href="/audit?source=nav">Get a free audit</a>
     </nav>
   </div>
 </header>
@@ -67,7 +67,7 @@
       <h1 class="hero__title" style="font-family:var(--font-sans);letter-spacing:-0.03em;">Be the local business your city <span style="font-style:italic;background:#fff;color:#3f7ff2;border-radius:999px;padding:0 0.26em 0.05em;display:inline-block;">chooses</span>.</h1>
       <p class="hero__lead" style="font-family:var(--font-sans);font-weight:500;">SimplyCity gets shops, clinics and trades to the top of Google, Maps and every nearby search — so the customers already looking find you first.</p>
       <div class="hero__actions">
-        <a class="hero__btn hero__btn--primary" href="/free-audit">Claim your free audit <i data-lucide="arrow-right" width="18" height="18"></i></a>
+        <a class="hero__btn hero__btn--primary" href="/audit?source=hero">Claim your free audit <i data-lucide="arrow-right" width="18" height="18"></i></a>
         <a class="hero__btn hero__btn--ghost" href="#stories">See our results</a>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:24px 52px;margin-top:56px;">
@@ -112,7 +112,7 @@
       <h1 class="hero__title" style="font-family:var(--font-sans);letter-spacing:-0.03em;color:var(--ink-900);margin:20px 0 0;">Rank #1 where your city is <span style="font-style:italic;background:var(--sky-blue);color:#fff;border-radius:999px;padding:0 0.26em 0.05em;display:inline-block;">searching</span>.</h1>
       <p style="font-family:var(--font-sans);font-weight:500;font-size:20px;line-height:1.55;color:var(--text-body);max-width:500px;margin:24px 0 0;">We tune your profile, listings and reviews every month so the customers already looking for what you do find you first — on Google, Maps and everywhere nearby.</p>
       <div style="display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;">
-        <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="primary" size="lg" hint-size="200px,58px">Get a free audit <i data-lucide="arrow-right" width="18" height="18"></i></x-import>
+        <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="primary" size="lg" as="a" href="/audit?source=hero" hint-size="200px,58px">Get a free audit <i data-lucide="arrow-right" width="18" height="18"></i></x-import>
         <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="ghost" size="lg" as="a" href="#features" hint-size="150px,58px">See how it works</x-import>
       </div>
       <div style="display:flex;align-items:center;gap:16px;margin-top:40px;">
@@ -373,7 +373,7 @@
     <h2 style="font-family:var(--font-sans);font-weight:800;font-size:52px;line-height:1;letter-spacing:-0.03em;color:#fff;margin:0;">See where you rank today.</h2>
     <p style="font-family:var(--font-sans);font-weight:500;font-size:19px;line-height:1.5;color:rgba(255,255,255,0.9);margin:18px auto 32px;max-width:520px;">Get a free local-search audit for your business. No pitch, no obligation — just where you stand and how to climb.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="onBrand" size="lg" hint-size="220px,58px">Claim your free audit <i data-lucide="arrow-right" width="18" height="18"></i></x-import>
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="onBrand" size="lg" as="a" href="/audit?source=cta-band" hint-size="220px,58px">Claim your free audit <i data-lucide="arrow-right" width="18" height="18"></i></x-import>
       <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="ghostOnBrand" size="lg" as="a" href="/local-seo-pricing" hint-size="150px,58px">View pricing</x-import>
     </div>
   </div>
@@ -385,7 +385,7 @@
         <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Logo" tone="onBrand" knockout="#0E0E10" size="28" hint-size="140px,32px"></x-import>
         <p style="font-weight:500;font-size:15px;line-height:1.55;color:rgba(255,255,255,0.6);max-width:280px;margin:18px 0 0;">Bridging the gap between physical stores and the digital world.</p>
       </div>
-      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">Product</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="#features" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Features</a></li><li><a href="/results" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Results</a></li><li><a href="/local-seo-pricing" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Pricing</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Free audit</a></li></ul></div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">Product</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="#features" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Features</a></li><li><a href="/results" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Results</a></li><li><a href="/local-seo-pricing" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Pricing</a></li><li><a href="/audit?source=footer" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Free audit</a></li></ul></div>
       <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">Company</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">About</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Careers</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Blog</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Contact</a></li></ul></div>
       <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">Resources</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Local SEO guide</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Help center</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Privacy</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">Terms</a></li></ul></div>
   </div>

@@ -4,7 +4,8 @@
     { "source": "/local-seo-for-small-business", "destination": "/LocalSEOForSmallBusiness.dc.html" },
     { "source": "/google-business-profile-optimization", "destination": "/GoogleBusinessProfileOptimization.dc.html" },
     { "source": "/local-seo-pricing", "destination": "/Pricing.dc.html" },
-    { "source": "/results", "destination": "/Results.dc.html" }
+    { "source": "/results", "destination": "/Results.dc.html" },
+    { "source": "/audit", "destination": "/Audit.dc.html" }
   ],
   "redirects": [
     { "source": "/LocalSEOAgency.dc.html", "destination": "/local-seo-agency", "permanent": true },
@@ -12,6 +13,7 @@
     { "source": "/GoogleBusinessProfileOptimization.dc.html", "destination": "/google-business-profile-optimization", "permanent": true },
     { "source": "/Pricing.dc.html", "destination": "/local-seo-pricing", "permanent": true },
     { "source": "/Results.dc.html", "destination": "/results", "permanent": true },
+    { "source": "/Audit.dc.html", "destination": "/audit", "permanent": true },
     { "source": "/index.html", "destination": "/", "permanent": true }
   ]
 }
