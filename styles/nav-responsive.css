@@ -24,8 +24,10 @@
   .site-nav__toggle { display:none; }
   .site-nav__menu { position:static; flex-direction:row; align-items:center; gap:1.75rem; max-height:none; overflow:visible; visibility:visible; padding:0; border:0; background:none; }
   .site-nav__menu > a, .site-nav__sublabel { padding:0; border:0; font-size:.95rem; font-weight:600; }
-  .site-nav__group { position:relative; }
-  .site-nav__group .site-nav__sub { position:absolute; top:150%; left:0; min-width:250px; background:#fff; border:1px solid #eef1f6; border-radius:12px; box-shadow:0 12px 30px rgba(20,30,60,.10); padding:.5rem; display:none; }
+  /* padding-bottom + negative margin keeps a hoverable bridge under the label so the
+     dropdown (anchored at top:100%) can be reached without :hover dropping in the gap */
+  .site-nav__group { position:relative; padding-bottom:14px; margin-bottom:-14px; }
+  .site-nav__group .site-nav__sub { position:absolute; top:100%; left:0; min-width:250px; background:#fff; border:1px solid #eef1f6; border-radius:12px; box-shadow:0 12px 30px rgba(20,30,60,.10); padding:.5rem; display:none; }
   .site-nav__group:hover .site-nav__sub, .site-nav__group:focus-within .site-nav__sub { display:block; }
   .site-nav__group .site-nav__sub a { padding:.6rem .75rem; border-radius:8px; border:0; }
   .site-nav__group .site-nav__sub a:hover { background:#f3f7ff; }
