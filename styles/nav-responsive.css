@@ -1,3 +1,11 @@
+/* The DC runtime sets `#dc-root, #dc-root > .sc-host { height:100% }`, which caps the
+   sticky nav's containing block at one viewport — the nav sticks for one screen, then
+   scrolls away. Let the wrappers grow with their content so sticky works page-long.
+   Mobile only: desktop keeps its current scroll behavior. */
+@media (max-width:899.98px){
+  #dc-root, #dc-root > .sc-host { height:auto !important; min-height:100%; }
+}
+
 .site-nav { position:sticky; top:0; z-index:100; background:#fff; border-bottom:1px solid #eef1f6; }
 .site-nav__bar { display:flex; align-items:center; justify-content:space-between; gap:1rem; max-width:1200px; margin:0 auto; padding:.85rem 1.25rem; }
 .site-nav__logo { font-weight:800; font-size:1.25rem; color:#111; text-decoration:none; flex:0 0 auto; }

@@ -17,9 +17,11 @@
 <link rel="stylesheet" href="styles/nav-responsive.css">
 <link rel="stylesheet" href="styles/hero-responsive.css">
 <link rel="stylesheet" href="styles/grids-responsive.css">
+<link rel="stylesheet" href="styles/back-to-top.css">
 <script src="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/_ds_bundle.js"></script>
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script src="scripts/nav-toggle.js" defer></script>
+<script src="scripts/back-to-top.js" defer></script>
 <style>
   html{scroll-behavior:smooth;}
   body{margin:0;font-family:var(--font-sans);background:var(--white);color:var(--ink-900);-webkit-font-smoothing:antialiased;}
@@ -394,6 +396,10 @@
     </div>
   </div>
 </footer>
+
+<button class="back-to-top" type="button" aria-label="Back to top">
+  <i data-lucide="arrow-up" width="22" height="22"></i>
+</button>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;heroVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;A&quot;,&quot;B&quot;],&quot;default&quot;:&quot;A&quot;,&quot;tsType&quot;:&quot;'A'|'B'&quot;,&quot;section&quot;:&quot;Hero&quot;,&quot;label&quot;:&quot;Hero direction&quot;}}">
 class Component extends DCLogic {
