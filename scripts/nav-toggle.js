@@ -5,6 +5,50 @@
 
   function getNav() { return document.querySelector('.site-nav'); }
 
+  // Vercel serves these files at clean URLs (see vercel.json rewrites); local static servers
+  // reach them by file name, with or without the .html suffix. All spellings must resolve
+  // to the same page identity.
+  var CLEAN_PATHS = {
+    '/localseoagency.dc': '/local-seo-agency',
+    '/localseoforsmallbusiness.dc': '/local-seo-for-small-business',
+    '/googlebusinessprofileoptimization.dc': '/google-business-profile-optimization',
+    '/pricing.dc': '/local-seo-pricing',
+    '/results.dc': '/results',
+    '/audit.dc': '/audit',
+    '/about.dc': '/about',
+    '/contact.dc': '/contact',
+    '/blog.dc': '/blog'
+  };
+
+  function normalize(pathname) {
+    var p = pathname.toLowerCase().replace(/\.html$/, '').replace(/\/$/, '') || '/';
+    return CLEAN_PATHS[p] || p;
+  }
+
+  function markCurrentPage() {
+    var nav = getNav();
+    if (!nav) return;
+    var here = normalize(window.location.pathname);
+    var links = nav.querySelectorAll('.site-nav__menu a');
+    var currentInSub = false;
+    for (var i = 0; i < links.length; i++) {
+      var a = links[i];
+      // Same-page anchors (#how, #features) and the CTA resolve to a pathname match
+      // on the wrong pages, so they never get the current-page treatment.
+      var isCurrent = !a.hash && !a.classList.contains('site-nav__cta') && normalize(a.pathname) === here;
+      if (isCurrent && a.getAttribute('aria-current') !== 'page') a.setAttribute('aria-current', 'page');
+      if (!isCurrent && a.hasAttribute('aria-current')) a.removeAttribute('aria-current');
+      if (isCurrent && a.closest('.site-nav__sub')) currentInSub = true;
+    }
+    var sublabel = nav.querySelector('.site-nav__sublabel');
+    if (sublabel) sublabel.classList.toggle('site-nav__sublabel--current', currentInSub);
+  }
+
+  markCurrentPage();
+  // The DC runtime can re-render the header after hydration, dropping the marking —
+  // re-apply whenever nodes change. Attribute-only edits don't retrigger a childList observer.
+  new MutationObserver(markCurrentPage).observe(document.documentElement, { childList: true, subtree: true });
+
   function setOpen(nav, open) {
     var toggle = nav.querySelector('.site-nav__toggle');
     nav.setAttribute('data-open', open ? 'true' : 'false');

@@ -20,6 +20,12 @@
 .site-nav__sub a { display:block; padding:.6rem .25rem .6rem 1rem; font-weight:500; color:#556; text-decoration:none; border-bottom:1px solid #f7f8fb; }
 .site-nav__cta { margin-top:.75rem; text-align:center; background:#3f7ff2; color:#fff !important; border-radius:999px; padding:.85rem 1.25rem !important; border-bottom:0 !important; }
 
+/* Current page: scripts/nav-toggle.js sets aria-current="page" on the matching link and
+   --current on the Services label when the match is inside the dropdown. */
+.site-nav__menu > a[aria-current="page"],
+.site-nav__sub a[aria-current="page"],
+.site-nav__sublabel--current { color:#3f7ff2; }
+
 @media (min-width:900px){
   .site-nav__toggle { display:none; }
   .site-nav__menu { position:static; flex-direction:row; align-items:center; gap:1.75rem; max-height:none; overflow:visible; visibility:visible; padding:0; border:0; background:none; }
