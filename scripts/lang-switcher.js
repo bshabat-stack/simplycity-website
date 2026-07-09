@@ -16,7 +16,9 @@
   function targetHref(lang) {
     var cur = split(window.location.pathname);
     var prefix = lang === 'en' ? '' : '/' + lang;
-    return (prefix + cur.path) + window.location.search + window.location.hash;
+    // Locale homepage is /es, not /es/ — vercel.json sets trailingSlash:false.
+    var path = cur.path === '/' && prefix ? prefix : prefix + cur.path;
+    return path + window.location.search + window.location.hash;
   }
 
   function update() {

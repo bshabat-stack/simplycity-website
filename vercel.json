@@ -14,7 +14,17 @@
     { "source": "/about", "destination": "/About.dc.html" },
     { "source": "/contact", "destination": "/Contact.dc.html" },
     { "source": "/blog", "destination": "/Blog.dc.html" },
-    { "source": "/blog/:slug", "destination": "/BlogPost.dc.html" }
+    { "source": "/blog/:slug", "destination": "/BlogPost.dc.html" },
+    { "source": "/:locale(es|he)/local-seo-agency", "destination": "/:locale/LocalSEOAgency.dc.html" },
+    { "source": "/:locale(es|he)/local-seo-for-small-business", "destination": "/:locale/LocalSEOForSmallBusiness.dc.html" },
+    { "source": "/:locale(es|he)/google-business-profile-optimization", "destination": "/:locale/GoogleBusinessProfileOptimization.dc.html" },
+    { "source": "/:locale(es|he)/local-seo-pricing", "destination": "/:locale/Pricing.dc.html" },
+    { "source": "/:locale(es|he)/results", "destination": "/:locale/Results.dc.html" },
+    { "source": "/:locale(es|he)/audit", "destination": "/:locale/Audit.dc.html" },
+    { "source": "/:locale(es|he)/about", "destination": "/:locale/About.dc.html" },
+    { "source": "/:locale(es|he)/contact", "destination": "/:locale/Contact.dc.html" },
+    { "source": "/:locale(es|he)/blog", "destination": "/:locale/Blog.dc.html" },
+    { "source": "/:locale(es|he)/blog/:slug", "destination": "/:locale/BlogPost.dc.html" }
   ],
   "redirects": [
     { "source": "/LocalSEOAgency.dc.html", "destination": "/local-seo-agency", "permanent": true },
@@ -27,6 +37,17 @@
     { "source": "/Contact.dc.html", "destination": "/contact", "permanent": true },
     { "source": "/Blog.dc.html", "destination": "/blog", "permanent": true },
     { "source": "/BlogPost.dc.html", "destination": "/blog", "permanent": true },
-    { "source": "/index.html", "destination": "/", "permanent": true }
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/:locale(es|he)/LocalSEOAgency.dc.html", "destination": "/:locale/local-seo-agency", "permanent": true },
+    { "source": "/:locale(es|he)/LocalSEOForSmallBusiness.dc.html", "destination": "/:locale/local-seo-for-small-business", "permanent": true },
+    { "source": "/:locale(es|he)/GoogleBusinessProfileOptimization.dc.html", "destination": "/:locale/google-business-profile-optimization", "permanent": true },
+    { "source": "/:locale(es|he)/Pricing.dc.html", "destination": "/:locale/local-seo-pricing", "permanent": true },
+    { "source": "/:locale(es|he)/Results.dc.html", "destination": "/:locale/results", "permanent": true },
+    { "source": "/:locale(es|he)/Audit.dc.html", "destination": "/:locale/audit", "permanent": true },
+    { "source": "/:locale(es|he)/About.dc.html", "destination": "/:locale/about", "permanent": true },
+    { "source": "/:locale(es|he)/Contact.dc.html", "destination": "/:locale/contact", "permanent": true },
+    { "source": "/:locale(es|he)/Blog.dc.html", "destination": "/:locale/blog", "permanent": true },
+    { "source": "/:locale(es|he)/BlogPost.dc.html", "destination": "/:locale/blog", "permanent": true },
+    { "source": "/:locale(es|he)/index.html", "destination": "/:locale", "permanent": true }
   ]
 }

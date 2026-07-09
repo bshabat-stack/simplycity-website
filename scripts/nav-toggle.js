@@ -22,6 +22,13 @@
 
   function normalize(pathname) {
     var p = pathname.toLowerCase().replace(/\.html$/, '').replace(/\/$/, '') || '/';
+    // Locale folders (/es, /he) mirror the root filenames — normalize the inner
+    // path the same way so current-page marking works on localized pages too.
+    var loc = p.match(/^\/(es|he)(\/.*)?$/);
+    if (loc) {
+      var rest = (loc[2] || '/').replace(/^\/index$/, '/');
+      return '/' + loc[1] + (CLEAN_PATHS[rest] || (rest === '/' ? '' : rest));
+    }
     return CLEAN_PATHS[p] || p;
   }
 
