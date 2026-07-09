@@ -16,46 +16,40 @@
 <link rel="stylesheet" href="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/spacing.css">
 <link rel="stylesheet" href="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/effects.css">
 <link rel="stylesheet" href="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/styles.css">
+<link rel="stylesheet" href="styles/nav-responsive.css">
 <script src="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/_ds_bundle.js"></script>
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script src="scripts/nav-toggle.js" defer></script>
 <style>
   html{scroll-behavior:smooth;}
   body{margin:0;font-family:var(--font-sans);background:var(--white);color:var(--ink-900);-webkit-font-smoothing:antialiased;}
   *{box-sizing:border-box;}
-  .sc-nav-drop{position:relative;padding-bottom:14px;margin-bottom:-14px;}
-  .sc-nav-trigger{display:inline-flex;align-items:center;gap:6px;background:none;border:none;padding:0;margin:0;font-family:var(--font-sans);font-weight:700;font-size:15px;color:var(--ink-800);cursor:pointer;}
-  .sc-nav-chevron{transition:transform 200ms var(--ease-out);}
-  .sc-nav-drop:hover .sc-nav-chevron,.sc-nav-drop.sc-open .sc-nav-chevron{transform:rotate(180deg);}
-  .sc-nav-panel{position:absolute;top:100%;left:50%;min-width:290px;background:#fff;border-radius:18px;box-shadow:var(--shadow-lg);padding:10px;opacity:0;visibility:hidden;transform:translate(-50%,-6px);pointer-events:none;transition:opacity 200ms var(--ease-out),transform 200ms var(--ease-out),visibility 200ms;}
-  .sc-nav-drop:hover .sc-nav-panel,.sc-nav-drop.sc-open .sc-nav-panel{opacity:1;visibility:visible;transform:translate(-50%,0);pointer-events:auto;}
-  .sc-nav-item{display:block;text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);padding:11px 16px;border-radius:12px;transition:background 120ms var(--ease-out),color 120ms var(--ease-out);}
-  .sc-nav-item:hover{background:var(--sky-blue);color:#fff !important;}
 </style>
 </helmet>
 
-<header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.86);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--border-hairline);">
-  <div style="max-width:1200px;margin:0 auto;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;">
-    <a href="/" style="text-decoration:none;display:inline-flex;">
+<header class="site-nav" data-open="false">
+  <div class="site-nav__bar">
+    <a class="site-nav__logo" href="/" style="display:inline-flex;">
       <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Logo" tone="onLight" knockout="#fff" size="26" hint-size="132px,30px"></x-import>
     </a>
-    <nav style="display:flex;align-items:center;gap:34px;">
-      <a href="/#how" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">How it works</a>
-      <div class="sc-nav-drop{{ scNavOpenClass }}" onmouseenter="{{ scNavOpen }}" onmouseleave="{{ scNavClose }}">
-        <button type="button" class="sc-nav-trigger" onclick="{{ scNavToggle }}">
-          Services
-          <i data-lucide="chevron-down" width="15" height="15" class="sc-nav-chevron"></i>
-        </button>
-        <div class="sc-nav-panel">
-          <a href="/local-seo-agency" class="sc-nav-item">Local SEO Agency</a>
-          <a href="/local-seo-for-small-business" class="sc-nav-item">Local SEO for Small Business</a>
-          <a href="/google-business-profile-optimization" class="sc-nav-item">Google Business Profile Optimization</a>
+    <button class="site-nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav__menu" id="nav-menu">
+      <a href="/#how">How it works</a>
+      <div class="site-nav__group">
+        <div class="site-nav__sublabel" tabindex="0">Services ▾</div>
+        <div class="site-nav__sub">
+          <a href="/local-seo-agency">Local SEO Agency</a>
+          <a href="/local-seo-for-small-business">Local SEO for Small Business</a>
+          <a href="/google-business-profile-optimization">Google Business Profile Optimization</a>
         </div>
       </div>
-      <a href="/#features" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">Features</a>
-      <a href="/results" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--sky-blue);">Results</a>
-      <a href="/local-seo-pricing" style="text-decoration:none;font-weight:700;font-size:15px;color:var(--ink-800);">Pricing</a>
+      <a href="/#features">Features</a>
+      <a href="/results">Results</a>
+      <a href="/local-seo-pricing">Pricing</a>
+      <a class="site-nav__cta" href="/audit?source=results-nav">Get a free audit</a>
     </nav>
-    <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="primary" size="sm" as="a" href="/audit?source=results-nav" hint-size="150px,40px">Get a free audit</x-import>
   </div>
 </header>
 
@@ -198,10 +192,7 @@
 class Component extends DCLogic {
   constructor(props){
     super(props);
-    this.state = { servicesOpen: false };
-    this.scNavOpen = () => this.setState({ servicesOpen: true });
-    this.scNavClose = () => this.setState({ servicesOpen: false });
-    this.scNavToggle = () => this.setState(s => ({ servicesOpen: !s.servicesOpen }));
+    this.state = {};
   }
   componentDidMount(){ this.paint(); }
   componentDidUpdate(){ this.paint(); }
@@ -211,10 +202,7 @@ class Component extends DCLogic {
     [120, 400, 900, 1600].forEach(t => setTimeout(run, t));
   }
   renderVals(){
-    return {
-      scNavOpenClass: this.state.servicesOpen ? ' sc-open' : '',
-      scNavOpen: this.scNavOpen, scNavClose: this.scNavClose, scNavToggle: this.scNavToggle
-    };
+    return {};
   }
 }
 </script>
