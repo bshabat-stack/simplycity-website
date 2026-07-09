@@ -1,0 +1,4 @@
+# Shell scripts must keep LF endings so bash (including Git Bash on Windows) can
+# execute them — CRLF breaks the interpreter line and heredocs. The Claude Code
+# hook in .claude/hooks/ depends on this.
+*.sh text eol=lf
