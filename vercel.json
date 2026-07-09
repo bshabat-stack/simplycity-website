@@ -1,4 +1,6 @@
 {
+  "cleanUrls": false,
+  "trailingSlash": false,
   "functions": {
     "api/blog-posts.js": { "includeFiles": "content/blog/**" }
   },

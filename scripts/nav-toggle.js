@@ -34,8 +34,9 @@
     for (var i = 0; i < links.length; i++) {
       var a = links[i];
       // Same-page anchors (#how, #features) and the CTA resolve to a pathname match
-      // on the wrong pages, so they never get the current-page treatment.
-      var isCurrent = !a.hash && !a.classList.contains('site-nav__cta') && normalize(a.pathname) === here;
+      // on the wrong pages, so they never get the current-page treatment. Language
+      // switcher links manage their own aria-current (scripts/lang-switcher.js).
+      var isCurrent = !a.hash && !a.classList.contains('site-nav__cta') && !a.closest('.lang-switcher') && normalize(a.pathname) === here;
       if (isCurrent && a.getAttribute('aria-current') !== 'page') a.setAttribute('aria-current', 'page');
       if (!isCurrent && a.hasAttribute('aria-current')) a.removeAttribute('aria-current');
       if (isCurrent && a.closest('.site-nav__sub')) currentInSub = true;

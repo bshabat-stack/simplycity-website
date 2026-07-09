@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,6 +22,7 @@
 <script src="_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/_ds_bundle.js"></script>
 <script src="https://unpkg.com/marked@12.0.2/marked.min.js"></script>
 <script src="scripts/nav-toggle.js" defer></script>
+<script src="scripts/lang-switcher.js" defer></script>
 <style>
   html{scroll-behavior:smooth;}
   body{margin:0;font-family:var(--font-sans);background:var(--white);color:var(--ink-900);-webkit-font-smoothing:antialiased;}
@@ -51,6 +52,7 @@
       <a href="/results">Results</a>
       <a href="/local-seo-pricing">Pricing</a>
       <a class="site-nav__cta" href="/audit?source=nav">Get a free audit</a>
+      <nav class="lang-switcher" aria-label="Language"><a href="/" data-lang="en" lang="en" hreflang="en" aria-current="true">English</a><span aria-hidden="true">·</span><a href="/es/" data-lang="es" lang="es" hreflang="es">Español</a><span aria-hidden="true">·</span><a href="/he/" data-lang="he" lang="he" hreflang="he">עברית</a></nav>
     </nav>
   </div>
 </header>
@@ -96,6 +98,7 @@
   <div style="max-width:1200px;margin:0 auto;padding:0 1.25rem;">
     <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
       <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.5);">© 2026 SimplyCity. All rights reserved.</span>
+      <nav class="lang-switcher lang-switcher--footer" aria-label="Language"><a href="/" data-lang="en" lang="en" hreflang="en" aria-current="true">English</a><span aria-hidden="true">·</span><a href="/es/" data-lang="es" lang="es" hreflang="es">Español</a><span aria-hidden="true">·</span><a href="/he/" data-lang="he" lang="he" hreflang="he">עברית</a></nav>
       <span style="display:flex;gap:18px;color:rgba(255,255,255,0.6);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
     </div>
   </div>

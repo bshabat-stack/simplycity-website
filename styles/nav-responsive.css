@@ -44,3 +44,20 @@
 }
 
 @media (prefers-reduced-motion:reduce){ .site-nav *, .site-nav__menu { transition:none !important; } }
+
+/* Language switcher — markup lives in each page's header/footer; scripts/lang-switcher.js
+   rewrites the hrefs to the equivalent page in the other locale (prefix swap) and keeps
+   aria-current="true" on the active language. Logical properties so it mirrors under RTL. */
+.lang-switcher { display:flex; align-items:center; gap:.5rem; padding:.75rem .25rem; }
+.lang-switcher a { font-size:.9rem; font-weight:600; color:#6b7280; text-decoration:none; }
+.lang-switcher a:hover, .lang-switcher a:focus { color:#1c2230; }
+.lang-switcher a[aria-current="true"] { color:#3f7ff2; }
+.lang-switcher > span { color:#c6ccd8; user-select:none; }
+@media (min-width:900px){ .lang-switcher { padding:0; margin-inline-start:.25rem; } }
+
+/* Footer variant sits on the dark footer band */
+.lang-switcher--footer { padding:0; }
+.lang-switcher--footer a { color:rgba(255,255,255,0.6); }
+.lang-switcher--footer a:hover, .lang-switcher--footer a:focus { color:#fff; }
+.lang-switcher--footer a[aria-current="true"] { color:#fff; }
+.lang-switcher--footer > span { color:rgba(255,255,255,0.35); }
