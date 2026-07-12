@@ -4,13 +4,14 @@
    cannot mirror automatically: the Hebrew typeface, Latin-centric letter-spacing,
    and directional icons. */
 
-/* Montserrat (brand typeface) has no Hebrew glyphs. Heebo sits AFTER Montserrat in
-   the stack, so browsers keep Montserrat for Latin/numerals (brand names, stats)
-   and fall through to Heebo only for Hebrew characters. */
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap');
+/* Montserrat (brand typeface) has no Hebrew glyphs. Assistant sits AFTER Montserrat
+   in the stack, so browsers keep Montserrat for Latin/numerals (brand names, stats)
+   and fall through to Assistant only for Hebrew characters. Note: Assistant tops out
+   at weight 800 — the site's 900-weight display numbers stay Montserrat anyway. */
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --font-sans: 'Montserrat', 'Heebo', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Montserrat', 'Assistant', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* The tight negative tracking on display headings is a Latin-only design choice —
