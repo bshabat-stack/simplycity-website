@@ -45,6 +45,12 @@
 
 @media (prefers-reduced-motion:reduce){ .site-nav *, .site-nav__menu { transition:none !important; } }
 
+/* The SimplyCity wordmark ("Simply" + the "City" capsule) is a fixed brand asset and
+   must never mirror. The design-system Logo renders it as inline-flex spans, so under
+   dir="rtl" (/he pages) it reversed to "CitySimply". Pinned here — loaded by every
+   page, every locale — so all placements always read Simply→City. No-op in LTR. */
+.sc-logo { direction: ltr; }
+
 /* Language switcher — markup lives in each page's header/footer; scripts/lang-switcher.js
    rewrites the hrefs to the equivalent page in the other locale (prefix swap) and keeps
    aria-current="true" on the active language. Logical properties so it mirrors under RTL. */
