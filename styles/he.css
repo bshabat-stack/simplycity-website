@@ -1,0 +1,25 @@
+/* SimplyCity — Hebrew-only stylesheet, loaded ONLY on /he/ pages (after the shared
+   stylesheets). Layout mirroring itself comes from <html dir="rtl"> + the logical
+   properties in the shared CSS and page markup — this file only covers what CSS
+   cannot mirror automatically: the Hebrew typeface, Latin-centric letter-spacing,
+   and directional icons. */
+
+/* Montserrat (brand typeface) has no Hebrew glyphs. Heebo sits AFTER Montserrat in
+   the stack, so browsers keep Montserrat for Latin/numerals (brand names, stats)
+   and fall through to Heebo only for Hebrew characters. */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-sans: 'Montserrat', 'Heebo', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* The tight negative tracking on display headings is a Latin-only design choice —
+   it cramps Hebrew glyphs. Headings carry it as inline styles, hence !important. */
+h1, h2, h3, .hero__title, .page-hero__title, .page-section__title, .post-header__title {
+  letter-spacing: 0 !important;
+}
+
+/* "Forward" arrows must point with the reading direction. Lucide replaces
+   <i data-lucide="arrow-right"> with <svg class="lucide-arrow-right"> at runtime.
+   (arrow-up / trending-up are non-directional and stay as-is.) */
+svg.lucide-arrow-right { transform: scaleX(-1); }

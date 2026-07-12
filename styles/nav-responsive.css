@@ -14,10 +14,10 @@
 .site-nav[data-open="true"] .site-nav__toggle span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
 .site-nav[data-open="true"] .site-nav__toggle span:nth-child(2){ opacity:0; }
 .site-nav[data-open="true"] .site-nav__toggle span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
-.site-nav__menu { position:absolute; left:0; right:0; top:100%; display:flex; flex-direction:column; gap:.25rem; background:#fff; border-bottom:1px solid #eef1f6; padding:.5rem 1.25rem 1.25rem; max-height:0; overflow:hidden; visibility:hidden; transition:max-height .3s ease, visibility 0s linear .3s; }
+.site-nav__menu { position:absolute; inset-inline:0; top:100%; display:flex; flex-direction:column; gap:.25rem; background:#fff; border-bottom:1px solid #eef1f6; padding:.5rem 1.25rem 1.25rem; max-height:0; overflow:hidden; visibility:hidden; transition:max-height .3s ease, visibility 0s linear .3s; }
 .site-nav[data-open="true"] .site-nav__menu { max-height:85vh; overflow-y:auto; visibility:visible; transition:max-height .3s ease; }
 .site-nav__menu > a, .site-nav__sublabel { display:block; padding:.75rem .25rem; font-size:1.0625rem; font-weight:600; color:#1c2230; text-decoration:none; border-bottom:1px solid #f2f4f8; }
-.site-nav__sub a { display:block; padding:.6rem .25rem .6rem 1rem; font-weight:500; color:var(--ink-800); text-decoration:none; border-bottom:1px solid #f7f8fb; }
+.site-nav__sub a { display:block; padding-block:.6rem; padding-inline:1rem .25rem; font-weight:500; color:var(--ink-800); text-decoration:none; border-bottom:1px solid #f7f8fb; }
 .site-nav__cta { margin-top:.75rem; text-align:center; background:#3f7ff2; color:#fff !important; border-radius:999px; padding:.85rem 1.25rem !important; border-bottom:0 !important; }
 
 /* Current page: scripts/nav-toggle.js sets aria-current="page" on the matching link and
@@ -33,7 +33,7 @@
   /* padding-bottom + negative margin keeps a hoverable bridge under the label so the
      dropdown (anchored at top:100%) can be reached without :hover dropping in the gap */
   .site-nav__group { position:relative; padding-bottom:14px; margin-bottom:-14px; }
-  .site-nav__group .site-nav__sub { position:absolute; top:100%; left:0; min-width:250px; background:#fff; border:1px solid #eef1f6; border-radius:12px; box-shadow:0 12px 30px rgba(20,30,60,.10); padding:.5rem; display:none; }
+  .site-nav__group .site-nav__sub { position:absolute; top:100%; inset-inline-start:0; min-width:250px; background:#fff; border:1px solid #eef1f6; border-radius:12px; box-shadow:0 12px 30px rgba(20,30,60,.10); padding:.5rem; display:none; }
   .site-nav__group:hover .site-nav__sub, .site-nav__group:focus-within .site-nav__sub { display:block; }
   .site-nav__group .site-nav__sub a { padding:.6rem .75rem; border-radius:8px; border:0; }
   /* Highlighted = hover OR keyboard focus OR active route → solid brand blue + white text */
