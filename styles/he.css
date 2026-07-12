@@ -24,3 +24,8 @@ h1, h2, h3, .hero__title, .page-hero__title, .page-section__title, .post-header_
    <i data-lucide="arrow-right"> with <svg class="lucide-arrow-right"> at runtime.
    (arrow-up / trending-up are non-directional and stay as-is.) */
 svg.lucide-arrow-right { transform: scaleX(-1); }
+
+/* The SimplyCity wordmark ("Simply" + the "City" capsule) is a fixed brand asset
+   and must never mirror. The design-system Logo renders it as inline-flex spans,
+   so page-level RTL was reversing it to "CitySimply" — pin the mark itself to LTR. */
+.sc-logo { direction: ltr; }
