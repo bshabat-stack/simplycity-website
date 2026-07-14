@@ -1,0 +1,9 @@
+# Crawl everything except the API. CSS/JS under /_ds/, /styles/ and /scripts/ stay
+# crawlable on purpose — Google needs them to render the pages. The 404 pages are not
+# disallowed either: they carry <meta name="robots" content="noindex">, and blocking
+# them here would stop crawlers from ever reading that tag.
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://simplycity-website.vercel.app/sitemap.xml
