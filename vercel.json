@@ -2,9 +2,12 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "functions": {
-    "api/blog-posts.js": { "includeFiles": "content/blog/**" }
+    "api/blog-posts.js": { "includeFiles": "content/blog/**" },
+    "api/sitemap.js": { "includeFiles": "content/blog/**" },
+    "api/blog-post.js": { "includeFiles": "{BlogPost.dc.html,404.html,es/BlogPost.dc.html,es/404.html,he/BlogPost.dc.html,he/404.html,content/blog/**}" }
   },
   "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/api/sitemap" },
     { "source": "/local-seo-agency", "destination": "/LocalSEOAgency.dc.html" },
     { "source": "/local-seo-for-small-business", "destination": "/LocalSEOForSmallBusiness.dc.html" },
     { "source": "/google-business-profile-optimization", "destination": "/GoogleBusinessProfileOptimization.dc.html" },
@@ -14,7 +17,7 @@
     { "source": "/about", "destination": "/About.dc.html" },
     { "source": "/contact", "destination": "/Contact.dc.html" },
     { "source": "/blog", "destination": "/Blog.dc.html" },
-    { "source": "/blog/:slug", "destination": "/BlogPost.dc.html" },
+    { "source": "/blog/:slug", "destination": "/api/blog-post?locale=en&slug=:slug" },
     { "source": "/:locale(es|he)/local-seo-agency", "destination": "/:locale/LocalSEOAgency.dc.html" },
     { "source": "/:locale(es|he)/local-seo-for-small-business", "destination": "/:locale/LocalSEOForSmallBusiness.dc.html" },
     { "source": "/:locale(es|he)/google-business-profile-optimization", "destination": "/:locale/GoogleBusinessProfileOptimization.dc.html" },
@@ -24,7 +27,7 @@
     { "source": "/:locale(es|he)/about", "destination": "/:locale/About.dc.html" },
     { "source": "/:locale(es|he)/contact", "destination": "/:locale/Contact.dc.html" },
     { "source": "/:locale(es|he)/blog", "destination": "/:locale/Blog.dc.html" },
-    { "source": "/:locale(es|he)/blog/:slug", "destination": "/:locale/BlogPost.dc.html" }
+    { "source": "/:locale(es|he)/blog/:slug", "destination": "/api/blog-post?locale=:locale&slug=:slug" }
   ],
   "redirects": [
     { "source": "/LocalSEOAgency.dc.html", "destination": "/local-seo-agency", "permanent": true },

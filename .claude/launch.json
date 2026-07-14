@@ -7,6 +7,18 @@
       "runtimeArgs": ["serve", "."],
       "port": 3000,
       "autoPort": true
+    },
+    {
+      "name": "vercel-dev",
+      "runtimeExecutable": "vercel",
+      "runtimeArgs": ["dev", "--listen", "3100", "--yes"],
+      "port": 3100
+    },
+    {
+      "name": "scratchpad-static",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "http-server", "C:/Users/bshab/AppData/Local/Temp/claude/C--Users-bshab-OneDrive--------AI-Resources-Claude-Projects-SimplyCity/55a835eb-a7d5-4b3b-9bca-246a65231e9a/scratchpad", "-p", "8471", "-c-1"],
+      "port": 8471
     }
   ]
 }
