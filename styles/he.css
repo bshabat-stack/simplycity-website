@@ -23,7 +23,7 @@ h1, h2, h3, .hero__title, .page-hero__title, .page-section__title, .post-header_
 /* "Forward" arrows must point with the reading direction. Lucide replaces
    <i data-lucide="arrow-right"> with <svg class="lucide-arrow-right"> at runtime.
    (arrow-up / trending-up are non-directional and stay as-is.) */
-svg.lucide-arrow-right { transform: scaleX(-1); }
+svg.lucide-arrow-right, svg.lucide-arrow-up-right { transform: scaleX(-1); }
 
 /* Note: the .sc-logo direction:ltr pin (wordmark must never mirror) lives in the
    shared nav-responsive.css so it protects every locale, not just /he. */

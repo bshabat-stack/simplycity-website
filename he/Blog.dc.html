@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://simplycity-website.vercel.app/he/blog">
+<link rel="alternate" hreflang="en" href="https://simplycity-website.vercel.app/blog">
+<link rel="alternate" hreflang="es" href="https://simplycity-website.vercel.app/es/blog">
+<link rel="alternate" hreflang="he" href="https://simplycity-website.vercel.app/he/blog">
+<link rel="alternate" hreflang="x-default" href="https://simplycity-website.vercel.app/blog">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>בלוג: SEO מקומי, מוסבר פשוט | SimplyCity</title>
+<meta name="description" content="מדריכי SEO מקומי פרקטיים לבעלי עסקים קטנים — מה באמת מזיז את הדירוגים בגוגל ובמפות, בשפה פשוטה. מהצוות של SimplyCity.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "הבלוג של SimplyCity",
+  "description": "מדריכי SEO מקומי פרקטיים לבעלי עסקים קטנים, בשפה פשוטה.",
+  "inLanguage": "he-IL",
+  "publisher": {
+    "@type": "ProfessionalService",
+    "name": "SimplyCity"
+  }
+}
+</script>
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/fonts.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/colors.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/typography.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/spacing.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/effects.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/styles.css">
+<link rel="stylesheet" href="/styles/nav-responsive.css">
+<link rel="stylesheet" href="/styles/grids-responsive.css">
+<link rel="stylesheet" href="/styles/subpage.css">
+<link rel="stylesheet" href="/styles/he.css">
+<script src="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/_ds_bundle.js"></script>
+<script src="/scripts/nav-toggle.js" defer></script>
+<script src="/scripts/lang-switcher.js" defer></script>
+<style>
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-sans);background:var(--white);color:var(--ink-900);-webkit-font-smoothing:antialiased;}
+  *{box-sizing:border-box;}
+</style>
+</helmet>
+
+<header class="site-nav" data-open="false">
+  <div class="site-nav__bar">
+    <a class="site-nav__logo" href="/he" style="display:inline-flex;">
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Logo" tone="onLight" knockout="#fff" size="26" hint-size="132px,30px"></x-import>
+    </a>
+    <button class="site-nav__toggle" type="button" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav__menu" id="nav-menu">
+      <a href="/he#how">איך זה עובד</a>
+      <div class="site-nav__group">
+        <div class="site-nav__sublabel" tabindex="0">שירותים ▾</div>
+        <div class="site-nav__sub">
+          <a href="/he/local-seo-agency">סוכנות SEO מקומי</a>
+          <a href="/he/local-seo-for-small-business">SEO מקומי לעסקים קטנים</a>
+          <a href="/he/google-business-profile-optimization">אופטימיזציה לפרופיל העסק בגוגל</a>
+        </div>
+      </div>
+      <a href="/he#features">יכולות</a>
+      <a href="/he/results">תוצאות</a>
+      <a href="/he/local-seo-pricing">מחירים</a>
+      <a class="site-nav__cta" href="/he/audit?source=nav">קבלו בדיקה חינם</a>
+      <nav class="lang-switcher" aria-label="שפה"><a href="/" data-lang="en" lang="en" hreflang="en">English</a><span aria-hidden="true">·</span><a href="/es" data-lang="es" lang="es" hreflang="es">Español</a><span aria-hidden="true">·</span><a href="/he" data-lang="he" lang="he" hreflang="he" aria-current="true">עברית</a></nav>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Eyebrow" tone="onBrand" hint-size="80px,16px">בלוג</x-import>
+    <h1 class="page-hero__title">SEO מקומי, מוסבר <span class="page-hero__pill">פשוט</span>.</h1>
+    <p class="page-hero__lead">מדריכים פרקטיים לבעלי עסקים — מה באמת מזיז את הדירוגים שלכם בגוגל ובמפות, בשפה פשוטה.</p>
+  </div>
+</section>
+
+<section class="page-section page-section--subtle">
+  <sc-if value="{{ showEmpty }}" hint-placeholder-val="{{ true }}">
+  <div class="blog-empty">
+    <span class="blog-empty__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"></path></svg></span>
+    <h2 class="blog-empty__title">מאמרים חדשים בדרך.</h2>
+    <p class="blog-empty__text">אנחנו כותבים מדריכים פרקטיים על דירוג גבוה יותר בחיפוש המקומי. בינתיים, ראו איך אנחנו עובדים בעולם האמיתי.</p>
+    <div class="blog-empty__links">
+      <a class="blog-empty__link" href="/he/results">צפו בתוצאות של לקוחות אמיתיים <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform:scaleX(-1);"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+      <a class="blog-empty__link" href="/he/audit?source=blog">קבלו בדיקה חינם <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform:scaleX(-1);"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+    </div>
+  </div>
+  </sc-if>
+  <sc-if value="{{ hasPosts }}" hint-placeholder-val="{{ false }}">
+  <div class="blog-grid">
+    <sc-for list="{{ posts }}" as="post">
+      <article class="blog-card">
+        <sc-if value="{{ post.dateLabel }}"><p class="blog-card__date">{{ post.dateLabel }}</p></sc-if>
+        <h2 class="blog-card__title"><a href="/he/blog/{{ post.slug }}">{{ post.title }}</a></h2>
+        <sc-if value="{{ post.excerpt }}"><p class="blog-card__excerpt">{{ post.excerpt }}</p></sc-if>
+        <span class="blog-card__more" aria-hidden="true">לקריאת המאמר ←</span>
+      </article>
+    </sc-for>
+  </div>
+  </sc-if>
+</section>
+
+<footer class="site-footer" style="background:var(--ink-900);padding:24px 0 40px;">
+  <div class="site-footer__cols">
+      <div class="site-footer__brand">
+        <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Logo" tone="onBrand" knockout="#0E0E10" size="28" hint-size="140px,32px"></x-import>
+        <p style="font-weight:500;font-size:15px;line-height:1.55;color:rgba(255,255,255,0.6);max-width:280px;margin:18px 0 0;">מגשרים על הפער בין חנויות פיזיות לעולם הדיגיטלי.</p>
+      </div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">מוצר</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="/he#features" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">יכולות</a></li><li><a href="/he/results" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">תוצאות</a></li><li><a href="/he/local-seo-pricing" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">מחירים</a></li><li><a href="/he/audit?source=footer" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">בדיקה חינם</a></li></ul></div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">חברה</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="/he/about" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">אודות</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">קריירה</a></li><li><a href="/he/blog" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">בלוג</a></li><li><a href="/he/contact" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">צרו קשר</a></li></ul></div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">משאבים</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">מדריך SEO מקומי</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">מרכז עזרה</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">פרטיות</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">תנאי שימוש</a></li></ul></div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.25rem;">
+    <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.5);"><span dir="ltr">© 2026 SimplyCity</span> · כל הזכויות שמורות.</span>
+      <nav class="lang-switcher lang-switcher--footer" aria-label="שפה"><a href="/" data-lang="en" lang="en" hreflang="en">English</a><span aria-hidden="true">·</span><a href="/es" data-lang="es" lang="es" hreflang="es">Español</a><span aria-hidden="true">·</span><a href="/he" data-lang="he" lang="he" hreflang="he" aria-current="true">עברית</a></nav>
+      <span style="display:flex;gap:18px;color:rgba(255,255,255,0.6);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+function formatPostDate(value){
+  const iso = /^\d{4}-\d{2}-\d{2}$/.test(value) ? value + 'T00:00:00' : value;
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return value;
+  return d.toLocaleDateString('he-IL', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.state = { posts: [] };
+  }
+  componentDidMount(){
+    this.paint();
+    // Post list comes from /api/blog-posts (frontmatter of content/blog/*.md).
+    // If the API is unreachable (plain static preview) the empty state stays up.
+    fetch('/api/blog-posts')
+      .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+      .then(data => {
+        const posts = ((data && data.posts) || []).map(p => ({
+          slug: encodeURIComponent(p.slug || ''),
+          title: p.title || '',
+          excerpt: p.excerpt || '',
+          dateLabel: p.date ? formatPostDate(p.date) : ''
+        }));
+        if (posts.length) this.setState({ posts });
+      })
+      .catch(() => {});
+  }
+  componentDidUpdate(){ this.paint(); }
+  // Icons on this page are inline SVGs (not lucide swaps): the post list
+  // re-renders after fetch, and React crashes reconciling nodes that
+  // lucide.createIcons() replaced behind its back.
+  paint(){}
+  renderVals(){
+    const posts = this.state.posts || [];
+    return { posts, hasPosts: posts.length > 0, showEmpty: posts.length === 0 };
+  }
+}
+</script>
+</body>
+</html>

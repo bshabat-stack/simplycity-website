@@ -13,8 +13,11 @@
 .audit-form { display:flex; flex-direction:column; gap:1.125rem; }
 
 /* Honeypot — visually removed, ignored by keyboard and assistive tech. Real
-   visitors never see it; anything typed here marks the submission as spam. */
-.audit-hp { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+   visitors never see it; anything typed here marks the submission as spam.
+   inset-inline-start keeps it on the CLIPPED side in both directions — off-left
+   in LTR, off-right in RTL. A physical left:-9999px gave /he a 10,000px
+   horizontal scroll, because RTL documents extend scrollable area leftward. */
+.audit-hp { position:absolute; inset-inline-start:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
 
 .audit-field { display:flex; flex-direction:column; gap:7px; }
 .audit-label { font-weight:700; font-size:.9375rem; color:var(--text-strong); }

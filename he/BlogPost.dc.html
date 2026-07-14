@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>מאמר | הבלוג של SimplyCity</title>
+<meta name="description" content="מדריך SEO מקומי פרקטי מהבלוג של SimplyCity — עצות בשפה פשוטה לבעלי עסקים קטנים על דירוג גבוה יותר בגוגל ובמפות.">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/fonts.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/colors.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/typography.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/spacing.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/effects.css">
+<link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/styles.css">
+<link rel="stylesheet" href="/styles/nav-responsive.css">
+<link rel="stylesheet" href="/styles/grids-responsive.css">
+<link rel="stylesheet" href="/styles/subpage.css">
+<link rel="stylesheet" href="/styles/he.css">
+<script src="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/_ds_bundle.js"></script>
+<script src="https://unpkg.com/marked@12.0.2/marked.min.js"></script>
+<script src="/scripts/nav-toggle.js" defer></script>
+<script src="/scripts/lang-switcher.js" defer></script>
+<style>
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:var(--font-sans);background:var(--white);color:var(--ink-900);-webkit-font-smoothing:antialiased;}
+  *{box-sizing:border-box;}
+</style>
+</helmet>
+
+<header class="site-nav" data-open="false">
+  <div class="site-nav__bar">
+    <a class="site-nav__logo" href="/he" style="display:inline-flex;">
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Logo" tone="onLight" knockout="#fff" size="26" hint-size="132px,30px"></x-import>
+    </a>
+    <button class="site-nav__toggle" type="button" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav__menu" id="nav-menu">
+      <a href="/he#how">איך זה עובד</a>
+      <div class="site-nav__group">
+        <div class="site-nav__sublabel" tabindex="0">שירותים ▾</div>
+        <div class="site-nav__sub">
+          <a href="/he/local-seo-agency">סוכנות SEO מקומי</a>
+          <a href="/he/local-seo-for-small-business">SEO מקומי לעסקים קטנים</a>
+          <a href="/he/google-business-profile-optimization">אופטימיזציה לפרופיל העסק בגוגל</a>
+        </div>
+      </div>
+      <a href="/he#features">יכולות</a>
+      <a href="/he/results">תוצאות</a>
+      <a href="/he/local-seo-pricing">מחירים</a>
+      <a class="site-nav__cta" href="/he/audit?source=nav">קבלו בדיקה חינם</a>
+      <nav class="lang-switcher" aria-label="שפה"><a href="/" data-lang="en" lang="en" hreflang="en">English</a><span aria-hidden="true">·</span><a href="/es" data-lang="es" lang="es" hreflang="es">Español</a><span aria-hidden="true">·</span><a href="/he" data-lang="he" lang="he" hreflang="he" aria-current="true">עברית</a></nav>
+    </nav>
+  </div>
+</header>
+
+<section class="post-header">
+  <div class="post-header__inner">
+    <a class="post-header__back" href="/he/blog"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform:scaleX(-1);"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg> כל המאמרים</a>
+    <h1 class="post-header__title">{{ heading }}</h1>
+    <sc-if value="{{ dateLabel }}"><p class="post-header__date">{{ dateLabel }}</p></sc-if>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="post-body" dir="auto">
+    <sc-if value="{{ isMissing }}" hint-placeholder-val="{{ false }}">
+      <p>ייתכן שהוא הועבר, או שיש טעות בקישור.</p>
+      <p><a href="/he/blog">לכל המאמרים</a></p>
+    </sc-if>
+    <sc-if value="{{ isReady }}" hint-placeholder-val="{{ false }}">{{ bodyContent }}</sc-if>
+  </div>
+</section>
+
+<section style="background:var(--sky-blue);padding:72px 0;position:relative;overflow:hidden;">
+  <div style="max-width:820px;margin:0 auto;padding:0 40px;text-align:center;position:relative;">
+    <h2 style="font-family:var(--font-sans);font-weight:800;font-size:clamp(1.75rem,6vw,2.75rem);line-height:1.04;letter-spacing:-0.03em;color:#fff;margin:0;">מעדיפים שאנחנו נעשה את זה בשבילכם?</h2>
+    <p style="font-family:var(--font-sans);font-weight:500;font-size:1.0625rem;line-height:1.5;color:rgba(255,255,255,0.9);margin:14px auto 28px;max-width:520px;">קבלו בדיקת חיפוש מקומי חינם — איפה אתם מדורגים היום ומה יקפיץ אתכם למעלה. בלי שיחת מכירה, בלי התחייבות.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Button" variant="onBrand" size="lg" as="a" href="/he/audit?source=blog-post" hint-size="220px,58px">קבלו בדיקה חינם <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform:scaleX(-1);"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></x-import>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" style="background:var(--ink-900);padding:24px 0 40px;">
+  <div class="site-footer__cols">
+      <div class="site-footer__brand">
+        <x-import component-from-global-scope="SimplyCityDesignSystem_416ef3.Logo" tone="onBrand" knockout="#0E0E10" size="28" hint-size="140px,32px"></x-import>
+        <p style="font-weight:500;font-size:15px;line-height:1.55;color:rgba(255,255,255,0.6);max-width:280px;margin:18px 0 0;">מגשרים על הפער בין חנויות פיזיות לעולם הדיגיטלי.</p>
+      </div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">מוצר</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="/he#features" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">יכולות</a></li><li><a href="/he/results" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">תוצאות</a></li><li><a href="/he/local-seo-pricing" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">מחירים</a></li><li><a href="/he/audit?source=footer" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">בדיקה חינם</a></li></ul></div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">חברה</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="/he/about" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">אודות</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">קריירה</a></li><li><a href="/he/blog" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">בלוג</a></li><li><a href="/he/contact" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">צרו קשר</a></li></ul></div>
+      <div><div style="font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:16px;">משאבים</div><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;"><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">מדריך SEO מקומי</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">מרכז עזרה</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">פרטיות</a></li><li><a href="#" style="text-decoration:none;font-weight:600;font-size:15px;color:rgba(255,255,255,0.8);">תנאי שימוש</a></li></ul></div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;padding:0 1.25rem;">
+    <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.5);"><span dir="ltr">© 2026 SimplyCity</span> · כל הזכויות שמורות.</span>
+      <nav class="lang-switcher lang-switcher--footer" aria-label="שפה"><a href="/" data-lang="en" lang="en" hreflang="en">English</a><span aria-hidden="true">·</span><a href="/es" data-lang="es" lang="es" hreflang="es">Español</a><span aria-hidden="true">·</span><a href="/he" data-lang="he" lang="he" hreflang="he" aria-current="true">עברית</a></nav>
+      <span style="display:flex;gap:18px;color:rgba(255,255,255,0.6);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+// Frontmatter is a leading "---" block of simple "key: value" lines
+// (title, date, excerpt) — see content/blog/_TEMPLATE.md.
+function parsePostFrontmatter(raw){
+  const meta = {};
+  let body = raw;
+  const block = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+  if (block) {
+    body = raw.slice(block[0].length);
+    block[1].split(/\r?\n/).forEach(line => {
+      const sep = line.indexOf(':');
+      if (sep > 0) meta[line.slice(0, sep).trim()] = line.slice(sep + 1).trim().replace(/^["']|["']$/g, '');
+    });
+  }
+  return { meta, body };
+}
+
+function formatPostDate(value){
+  const iso = /^\d{4}-\d{2}-\d{2}$/.test(value) ? value + 'T00:00:00' : value;
+  const d = new Date(iso);
+  if (isNaN(d.getTime())) return value;
+  return d.toLocaleDateString('he-IL', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function escapeHtml(text){
+  return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.state = { status: 'loading', title: '', dateLabel: '', excerpt: '', html: '' };
+  }
+  componentDidMount(){
+    this.paint();
+    this.loadPost();
+  }
+  componentDidUpdate(){ this.paint(); }
+  // The slug comes from the /he/blog/<slug> path (rewritten here by vercel.json),
+  // or from ?slug= as a fallback for local previews without rewrites. The post
+  // itself is the static Markdown file at /content/blog/<slug>.md.
+  loadPost(){
+    const match = window.location.pathname.match(/^\/he\/blog\/([A-Za-z0-9-]+)\/?$/);
+    const slug = match ? match[1] : new URLSearchParams(window.location.search).get('slug');
+    if (!slug || !/^[A-Za-z0-9-]+$/.test(slug)) return this.markMissing();
+
+    fetch('/content/blog/' + slug + '.md')
+      .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.text(); })
+      .then(raw => {
+        const post = parsePostFrontmatter(raw);
+        if (!post.meta.title) throw new Error('post has no title in frontmatter');
+        const html = window.marked
+          ? window.marked.parse(post.body)
+          : escapeHtml(post.body).split(/\r?\n\r?\n/).map(p => '<p>' + p + '</p>').join('');
+        this.setState({
+          status: 'ready',
+          title: post.meta.title,
+          dateLabel: post.meta.date ? formatPostDate(post.meta.date) : '',
+          excerpt: post.meta.excerpt || '',
+          html
+        }, () => {
+          // After the commit, so the helmet's static <title> sync doesn't win.
+          document.title = post.meta.title + ' | הבלוג של SimplyCity';
+          const desc = document.querySelector('meta[name="description"]');
+          if (desc && post.meta.excerpt) desc.setAttribute('content', post.meta.excerpt);
+        });
+      })
+      .catch(() => this.markMissing());
+  }
+  markMissing(){
+    this.setState({ status: 'missing' }, () => {
+      document.title = 'המאמר לא נמצא | הבלוג של SimplyCity';
+    });
+  }
+  // Icons on this page are inline SVGs (not lucide swaps): the post renders
+  // after fetch, and React crashes reconciling nodes that lucide.createIcons()
+  // replaced behind its back.
+  paint(){}
+  renderVals(){
+    const s = this.state;
+    return {
+      heading: s.status === 'loading' ? 'טוען מאמר…'
+        : s.status === 'missing' ? 'לא מצאנו את המאמר הזה.'
+        : s.title,
+      dateLabel: s.status === 'ready' ? s.dateLabel : '',
+      isReady: s.status === 'ready',
+      isMissing: s.status === 'missing',
+      bodyContent: React.createElement('div', { dangerouslySetInnerHTML: { __html: s.html } })
+    };
+  }
+}
+</script>
+</body>
+</html>
