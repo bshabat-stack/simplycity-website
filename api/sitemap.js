@@ -43,14 +43,29 @@ function url(locale, page) {
   return ORIGIN + PREFIX[locale] + '/' + page;
 }
 
-function entry(locale, page) {
-  const lines = ['  <url>', '    <loc>' + url(locale, page) + '</loc>'];
-  for (const alt of LOCALES) {
-    lines.push('    <xhtml:link rel="alternate" hreflang="' + alt + '" href="' + url(alt, page) + '"/>');
+// Two shapes of entry live in this sitemap, and the difference is deliberate.
+//
+// pageEntry(): the 10 site pages genuinely ARE translations of each other, so
+// each gets the full en/es/he/x-default cluster.
+//
+// postEntry(): blog posts are NOT. Each locale has its own independent set of
+// posts, so a post gets a <loc> under its own locale and nothing else — no
+// hreflang, because there is no counterpart to point at.
+function pageEntry(page) {
+  const lines = [];
+  for (const locale of LOCALES) {
+    lines.push('  <url>', '    <loc>' + url(locale, page) + '</loc>');
+    for (const alt of LOCALES) {
+      lines.push('    <xhtml:link rel="alternate" hreflang="' + alt + '" href="' + url(alt, page) + '"/>');
+    }
+    lines.push('    <xhtml:link rel="alternate" hreflang="x-default" href="' + url('en', page) + '"/>');
+    lines.push('  </url>');
   }
-  lines.push('    <xhtml:link rel="alternate" hreflang="x-default" href="' + url('en', page) + '"/>');
-  lines.push('  </url>');
   return lines.join('\n');
+}
+
+function postEntry(locale, slug) {
+  return ['  <url>', '    <loc>' + url(locale, 'blog/' + slug) + '</loc>', '  </url>'].join('\n');
 }
 
 // Must agree exactly with api/blog-post.js about what counts as published —
@@ -75,8 +90,10 @@ function parseFrontmatter(raw) {
 // means draft, the slug must be lowercase/digits/hyphens, and a post with no
 // title in its frontmatter is not published. The slug rule also means no slug
 // can reach the XML needing escaping.
-function publishedSlugs() {
-  const dir = path.join(process.cwd(), 'content', 'blog');
+//
+// Scoped to one locale's folder — a post is listed under its own locale only.
+function publishedSlugs(locale) {
+  const dir = path.join(process.cwd(), 'content', 'blog', locale);
   let files = [];
   try {
     files = fs.readdirSync(dir);
@@ -103,12 +120,18 @@ module.exports = async (req, res) => {
     return res.status(405).send('Method not allowed.');
   }
 
-  const pages = PAGES.concat(publishedSlugs().map((slug) => 'blog/' + slug));
-
   const entries = [];
-  for (const page of pages) {
-    for (const locale of LOCALES) {
-      entries.push(entry(locale, page));
+
+  // Translated pages: one clustered <url> per locale.
+  for (const page of PAGES) {
+    entries.push(pageEntry(page));
+  }
+
+  // Blog posts: each locale contributes only its own, exactly once. A slug that
+  // exists solely in content/blog/en appears solely under /blog/.
+  for (const locale of LOCALES) {
+    for (const slug of publishedSlugs(locale)) {
+      entries.push(postEntry(locale, slug));
     }
   }
 

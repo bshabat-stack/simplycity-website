@@ -141,9 +141,10 @@ class Component extends DCLogic {
   }
   componentDidMount(){
     this.paint();
-    // Post list comes from /api/blog-posts (frontmatter of content/blog/*.md).
+    // Post list comes from /api/blog-posts (frontmatter of content/blog/en/*.md).
+    // English posts only — each locale has its own separate set.
     // If the API is unreachable (plain static preview) the empty state stays up.
-    fetch('/api/blog-posts')
+    fetch('/api/blog-posts?locale=en')
       .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
       .then(data => {
         const posts = ((data && data.posts) || []).map(p => ({

@@ -144,13 +144,15 @@ class Component extends DCLogic {
   componentDidUpdate(){ this.paint(); }
   // The slug comes from the /es/blog/<slug> path (rewritten here by vercel.json),
   // or from ?slug= as a fallback for local previews without rewrites. The post
-  // itself is the static Markdown file at /content/blog/<slug>.md.
+  // itself is the static Markdown file at /content/blog/es/<slug>.md — this
+  // locale's own post set. Posts are NOT shared or translated across locales, so
+  // a slug published in another locale simply does not resolve here.
   loadPost(){
     const match = window.location.pathname.match(/^\/es\/blog\/([A-Za-z0-9-]+)\/?$/);
     const slug = match ? match[1] : new URLSearchParams(window.location.search).get('slug');
     if (!slug || !/^[A-Za-z0-9-]+$/.test(slug)) return this.markMissing();
 
-    fetch('/content/blog/' + slug + '.md')
+    fetch('/content/blog/es/' + slug + '.md')
       .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.text(); })
       .then(raw => {
         const post = parsePostFrontmatter(raw);

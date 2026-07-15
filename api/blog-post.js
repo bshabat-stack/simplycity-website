@@ -7,9 +7,18 @@
 // couldn't find that article" shell served as though it were a real page.
 // Here, a slug with no Markdown behind it gets a genuine 404.
 //
-// On a hit we serve the locale's BlogPost.dc.html with the canonical, the
-// hreflang cluster and BlogPosting JSON-LD injected into <head>. Those are
-// per-slug, which is exactly why the static template cannot carry them.
+// On a hit we serve the locale's BlogPost.dc.html with the canonical and
+// BlogPosting JSON-LD injected into <head>. Those are per-slug, which is
+// exactly why the static template cannot carry them.
+//
+// There is deliberately NO hreflang here, unlike every other page on the site.
+// Each locale has its own independent set of posts (content/blog/<locale>) —
+// they are not translations of one another. hreflang asserts "the same page in
+// another language", so pointing /blog/foo at /es/blog/foo would tell Google two
+// unrelated articles are interchangeable and invite it to swap one for the other
+// in results. It would also point at URLs that 404 whenever a slug exists in one
+// locale only, which is the normal case. A self-referencing canonical is the
+// whole of the correct markup here.
 
 const fs = require('fs');
 const path = require('path');
@@ -59,12 +68,9 @@ function jsonLd(value) {
 }
 
 function headTags(locale, slug, meta) {
+  // Canonical only — see the note at the top of this file on why posts carry no
+  // hreflang.
   const tags = ['<link rel="canonical" href="' + attr(postUrl(locale, slug)) + '">'];
-
-  for (const alt of LOCALES) {
-    tags.push('<link rel="alternate" hreflang="' + alt + '" href="' + attr(postUrl(alt, slug)) + '">');
-  }
-  tags.push('<link rel="alternate" hreflang="x-default" href="' + attr(postUrl('en', slug)) + '">');
 
   const article = {
     '@context': 'https://schema.org',
@@ -113,9 +119,13 @@ module.exports = async (req, res) => {
 
   if (!SLUG.test(slug)) return miss();
 
+  // Scoped to the requesting locale's folder, so a slug published only in English
+  // genuinely does not exist at /he/blog/<slug> — it 404s rather than falling back.
+  // `locale` comes from the LOCALES whitelist and `slug` from SLUG (which rejects
+  // "." and "/"), so this path can never escape content/blog.
   let meta;
   try {
-    meta = parseFrontmatter(fs.readFileSync(path.join(root, 'content', 'blog', slug + '.md'), 'utf8'));
+    meta = parseFrontmatter(fs.readFileSync(path.join(root, 'content', 'blog', locale, slug + '.md'), 'utf8'));
   } catch {
     return miss();
   }
