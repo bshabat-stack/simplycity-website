@@ -63,8 +63,13 @@
 .post-body code { background:var(--ink-50); border-radius:6px; padding:.15em .4em; font-size:.9em; }
 .post-body pre { background:var(--ink-50); border-radius:14px; padding:1rem 1.25rem; overflow-x:auto; margin:0 0 1.25rem; }
 .post-body pre code { background:none; padding:0; }
-.post-body img { border-radius:14px; }
+.post-body img { display:block; max-width:100%; height:auto; border-radius:14px; margin:1.75rem 0; }
 .post-body hr { border:0; border-top:1px solid var(--border-hairline); margin:2rem 0; }
+
+/* Author byline at the foot of a post (name + bio from frontmatter). */
+.post-author { max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:.5rem; }
+.post-author__name { font-weight:800; font-size:1.0625rem; color:var(--ink-900); margin:0; }
+.post-author__bio { font-weight:500; font-size:.9375rem; line-height:1.6; color:var(--text-body); margin:0; }
 
 /* Keyboard focus stays visible on links and buttons across the subpages. */
 a:focus-visible, button:focus-visible { outline:3px solid var(--focus-ring); outline-offset:2px; }

@@ -63,7 +63,10 @@ module.exports = async (req, res) => {
         slug: file.replace(/\.md$/, ''),
         title: meta.title || '',
         date: meta.date || '',
-        excerpt: meta.excerpt || ''
+        excerpt: meta.excerpt || '',
+        // Optional explicit label (e.g. "Updated Jul 15, 2026"); the index prefers
+        // it over the formatted date when present.
+        dateLabel: meta.dateLabel || ''
       };
     })
     .filter((post) => post && post.title)

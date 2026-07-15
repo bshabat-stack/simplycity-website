@@ -151,7 +151,8 @@ class Component extends DCLogic {
           slug: encodeURIComponent(p.slug || ''),
           title: p.title || '',
           excerpt: p.excerpt || '',
-          dateLabel: p.date ? formatPostDate(p.date) : ''
+          // Prefer an explicit dateLabel (e.g. "Updated Jul 15, 2026"); else format date.
+          dateLabel: p.dateLabel || (p.date ? formatPostDate(p.date) : '')
         }));
         if (posts.length) this.setState({ posts });
       })

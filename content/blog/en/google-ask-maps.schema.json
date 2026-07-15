@@ -1,0 +1,99 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Google Ask Maps: How to Make Sure Your Business Gets Recommended by AI",
+    "description": "Google's new Ask Maps AI recommends local businesses by name. Learn how it works and the 5 profile changes your business needs to show up.",
+    "image": "https://simplycity-website.vercel.app/blog/google-ask-maps/hero.jpg",
+    "datePublished": "2026-07-15",
+    "dateModified": "2026-07-15",
+    "author": {
+      "@type": "Person",
+      "name": "Ben Shabat",
+      "description": "Content marketing strategist with 8+ years writing across fintech and B2B tech."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SimplyCity",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://simplycity-website.vercel.app/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://simplycity-website.vercel.app/blog/google-ask-maps"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Google Ask Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google Ask Maps is a conversational AI search feature inside Google Maps, launched in March 2026 and powered by Google Gemini. Users ask natural-language questions and receive AI-generated recommendations for specific local businesses, rather than a ranked list."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Google Ask Maps available in Spain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Google Ask Maps is live in Spain, including Barcelona, as of its March 2026 launch, with a full global rollout announced for the end of 2026. It is currently active across the US, UK, Spain, and other major European markets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Ask Maps decide which businesses to recommend?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ask Maps draws on three signals: Google Business Profile completeness and specificity; review sentiment analysis of the language customers use; and GBP attributes such as outdoor seating or good for groups. Businesses with detailed signals across all three are recommended more consistently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a separate strategy for Ask Maps vs. regular Google Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Ask Maps uses the same Google Business Profile data as regular Google Maps. Completing your profile, setting attributes, generating specific reviews, and listing services improves both simultaneously — though Ask Maps weights attribute specificity and review language more heavily."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to see results after optimising for Ask Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GBP profile changes can show visible results within days to two weeks. Meaningful ranking improvements typically appear within four to eight weeks of consistent optimisation, and review-velocity gains compound over time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My competitor has far more reviews than me. Can I still appear in Ask Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Ask Maps matches on multiple dimensions, not just review count. A business with 50 specific, well-responded reviews and a fully completed GBP can outrank a competitor with 300 generic reviews for attribute-specific queries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does my Google Business Profile help with ChatGPT or Perplexity recommendations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not directly — ChatGPT and Perplexity do not use GBP data the way Google does. But a well-optimised GBP creates consistent entity signals across your website, Google's Knowledge Graph, directories, and review platforms, which influences how third-party AI platforms describe your business."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://simplycity-website.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://simplycity-website.vercel.app/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Google Ask Maps", "item": "https://simplycity-website.vercel.app/blog/google-ask-maps" }
+    ]
+  }
+]

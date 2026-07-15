@@ -8,8 +8,9 @@
 <body>
 <x-dc>
 <helmet>
-<title>מאמר | הבלוג של SimplyCity</title>
-<meta name="description" content="מדריך SEO מקומי פרקטי מהבלוג של SimplyCity — עצות בשפה פשוטה לבעלי עסקים קטנים על דירוג גבוה יותר בגוגל ובמפות.">
+<!-- No static <title>/<meta name="description">: api/blog-post.js injects the
+     per-post copies server-side and the helmet manager would otherwise duplicate them. -->
+
 <link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/fonts.css">
 <link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/colors.css">
 <link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/typography.css">

@@ -62,29 +62,112 @@ function attr(value) {
   return String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 }
 
+function metaTag(kind, key, value) {
+  return '<meta ' + kind + '="' + attr(key) + '" content="' + attr(value) + '">';
+}
+
+// og:image and friends must be absolute; frontmatter stores them site-root-relative.
+function absoluteUrl(value) {
+  if (!value) return '';
+  if (/^https?:\/\//i.test(value)) return value;
+  return ORIGIN + (value.charAt(0) === '/' ? value : '/' + value);
+}
+
 // "</script>" inside a JSON-LD string would close the tag early.
 function jsonLd(value) {
   return JSON.stringify(value, null, 2).replace(/</g, '\\u003c');
 }
 
-function headTags(locale, slug, meta) {
-  // Canonical only — see the note at the top of this file on why posts carry no
-  // hreflang.
-  const tags = ['<link rel="canonical" href="' + attr(postUrl(locale, slug)) + '">'];
+// Optional per-post structured data: content/blog/<locale>/<slug>.schema.json holds
+// an array of JSON-LD objects (Article, FAQPage, BreadcrumbList, …) authored
+// alongside the post. Returns an array, or null if absent/unparseable — a broken
+// sidecar must never 500 the page, it just falls back to the default BlogPosting.
+function readSchema(root, locale, slug) {
+  let raw;
+  try {
+    raw = fs.readFileSync(path.join(root, 'content', 'blog', locale, slug + '.schema.json'), 'utf8');
+  } catch {
+    return null;
+  }
+  try {
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) return parsed.length ? parsed : null;
+    return parsed && typeof parsed === 'object' ? [parsed] : null;
+  } catch {
+    return null;
+  }
+}
 
-  const article = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: meta.title,
-    url: postUrl(locale, slug),
-    mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl(locale, slug) },
-    inLanguage: LOCALE_CONFIG[locale].lang,
-    publisher: { '@type': 'Organization', name: 'SimplyCity', url: ORIGIN }
-  };
-  if (meta.excerpt) article.description = meta.excerpt;
-  if (/^\d{4}-\d{2}-\d{2}$/.test(meta.date || '')) article.datePublished = meta.date;
+// Everything here is server-rendered into <head> so it is present pre-JS for
+// crawlers and social scrapers (which don't run the client framework). The extra
+// SEO fields are all optional: a minimal title/date/excerpt post still gets a
+// title, description, canonical and BlogPosting exactly as before.
+//
+// Self-referencing canonical, and deliberately NO hreflang — see the header
+// comment on why posts carry none.
+function headTags(root, locale, slug, meta) {
+  const url = postUrl(locale, slug);
+  const title = meta.metaTitle || meta.title;
+  // <title> mirrors loadPost() in the template exactly: metaTitle verbatim when
+  // set, else the brand-suffixed title — so the pre-JS and post-JS titles agree.
+  const docTitle = meta.metaTitle || (meta.title + ' | SimplyCity Blog');
+  const description = meta.metaDescription || meta.excerpt || '';
+  const image = absoluteUrl(meta.ogImage); // absolute — og/twitter image requires it
+  const tags = [];
 
-  tags.push('<script type="application/ld+json">\n' + jsonLd(article) + '\n</script>');
+  // The static <title> and <meta name="description"> were removed from the
+  // BlogPost templates so the ones injected here are the only copies.
+  tags.push('<title>' + attr(docTitle) + '</title>');
+  if (description) tags.push(metaTag('name', 'description', description));
+  tags.push(metaTag('name', 'robots', 'index, follow, max-image-preview:large'));
+  tags.push('<link rel="canonical" href="' + attr(url) + '">');
+  // Preload the hero with the SAME root-relative path as its <img>, so the two
+  // match in every environment (an absolute prod URL wouldn't match on preview).
+  if (meta.ogImage) tags.push('<link rel="preload" as="image" href="' + attr(meta.ogImage) + '">');
+
+  // Open Graph
+  tags.push(metaTag('property', 'og:type', 'article'));
+  tags.push(metaTag('property', 'og:title', title));
+  if (description) tags.push(metaTag('property', 'og:description', description));
+  tags.push(metaTag('property', 'og:url', url));
+  tags.push(metaTag('property', 'og:site_name', 'SimplyCity'));
+  if (image) {
+    tags.push(metaTag('property', 'og:image', image));
+    if (meta.ogImageAlt) tags.push(metaTag('property', 'og:image:alt', meta.ogImageAlt));
+  }
+  const published = meta.publishDate || meta.date;
+  if (published) tags.push(metaTag('property', 'article:published_time', published));
+  if (meta.updatedDate) tags.push(metaTag('property', 'article:modified_time', meta.updatedDate));
+  if (meta.author) tags.push(metaTag('property', 'article:author', meta.author));
+
+  // Twitter
+  tags.push(metaTag('name', 'twitter:card', 'summary_large_image'));
+  tags.push(metaTag('name', 'twitter:title', title));
+  if (description) tags.push(metaTag('name', 'twitter:description', description));
+  if (image) tags.push(metaTag('name', 'twitter:image', image));
+
+  // Structured data: the sidecar wins when present; otherwise the default
+  // BlogPosting keeps minimal posts covered.
+  const schema = readSchema(root, locale, slug);
+  if (schema) {
+    for (const block of schema) {
+      tags.push('<script type="application/ld+json">\n' + jsonLd(block) + '\n</script>');
+    }
+  } else {
+    const article = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: meta.title,
+      url,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      inLanguage: LOCALE_CONFIG[locale].lang,
+      publisher: { '@type': 'Organization', name: 'SimplyCity', url: ORIGIN }
+    };
+    if (meta.excerpt) article.description = meta.excerpt;
+    if (/^\d{4}-\d{2}-\d{2}$/.test(meta.date || '')) article.datePublished = meta.date;
+    tags.push('<script type="application/ld+json">\n' + jsonLd(article) + '\n</script>');
+  }
+
   return tags.join('\n');
 }
 
@@ -141,7 +224,7 @@ module.exports = async (req, res) => {
     return send(res, 500, 'Blog post template missing.', 'text/plain; charset=utf-8', 'no-store');
   }
 
-  html = html.replace('</head>', headTags(locale, slug, meta) + '\n</head>');
+  html = html.replace('</head>', headTags(root, locale, slug, meta) + '\n</head>');
 
   return send(res, 200, html, 'text/html; charset=utf-8', 'public, s-maxage=300, stale-while-revalidate=86400');
 };

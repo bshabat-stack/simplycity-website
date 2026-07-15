@@ -8,8 +8,11 @@
 <body>
 <x-dc>
 <helmet>
-<title>Article | SimplyCity Blog</title>
-<meta name="description" content="A practical local SEO guide from the SimplyCity blog — plain-English advice for small business owners on ranking higher on Google and Maps.">
+<!-- No static <title>/<meta name="description"> here on purpose: api/blog-post.js
+     injects the authoritative, per-post title + description (plus OG/Twitter/schema)
+     server-side into <head>. A static copy here would duplicate those tags, since
+     the helmet manager appends rather than replaces. loadPost() keeps document.title
+     and the description meta in sync client-side for the SPA navigation case. -->
 <link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/fonts.css">
 <link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/colors.css">
 <link rel="stylesheet" href="/_ds/simplycity-design-system-416ef30a-06a1-4266-8cf1-1132d8601251/tokens/typography.css">
@@ -75,6 +78,15 @@
   </div>
 </section>
 
+<sc-if value="{{ hasAuthor }}" hint-placeholder-val="{{ false }}">
+<section class="page-section page-section--subtle">
+  <div class="post-author">
+    <p class="post-author__name">{{ authorName }}</p>
+    <sc-if value="{{ authorBio }}"><p class="post-author__bio">{{ authorBio }}</p></sc-if>
+  </div>
+</section>
+</sc-if>
+
 <section style="background:var(--sky-blue);padding:72px 0;position:relative;overflow:hidden;">
   <div style="max-width:820px;margin:0 auto;padding:0 40px;text-align:center;position:relative;">
     <h2 style="font-family:var(--font-sans);font-weight:800;font-size:clamp(1.75rem,6vw,2.75rem);line-height:1.04;letter-spacing:-0.03em;color:#fff;margin:0;">Rather have us do it for you?</h2>
@@ -135,7 +147,7 @@ function escapeHtml(text){
 class Component extends DCLogic {
   constructor(props){
     super(props);
-    this.state = { status: 'loading', title: '', dateLabel: '', excerpt: '', html: '' };
+    this.state = { status: 'loading', title: '', dateLabel: '', excerpt: '', html: '', author: '', authorBio: '' };
   }
   componentDidMount(){
     this.paint();
@@ -163,14 +175,19 @@ class Component extends DCLogic {
         this.setState({
           status: 'ready',
           title: post.meta.title,
-          dateLabel: post.meta.date ? formatPostDate(post.meta.date) : '',
+          // Prefer an explicit dateLabel (e.g. "Updated Jul 15, 2026"); else format date.
+          dateLabel: post.meta.dateLabel || (post.meta.date ? formatPostDate(post.meta.date) : ''),
           excerpt: post.meta.excerpt || '',
+          author: post.meta.author || '',
+          authorBio: post.meta.authorBio || '',
           html
         }, () => {
-          // After the commit, so the helmet's static <title> sync doesn't win.
-          document.title = post.meta.title + ' | SimplyCity Blog';
+          // Mirror the server-injected head (api/blog-post.js) so client navigation
+          // agrees with it: metaTitle verbatim when present, else title + suffix.
+          document.title = post.meta.metaTitle || (post.meta.title + ' | SimplyCity Blog');
           const desc = document.querySelector('meta[name="description"]');
-          if (desc && post.meta.excerpt) desc.setAttribute('content', post.meta.excerpt);
+          const descText = post.meta.metaDescription || post.meta.excerpt;
+          if (desc && descText) desc.setAttribute('content', descText);
         });
       })
       .catch(() => this.markMissing());
@@ -193,6 +210,9 @@ class Component extends DCLogic {
       dateLabel: s.status === 'ready' ? s.dateLabel : '',
       isReady: s.status === 'ready',
       isMissing: s.status === 'missing',
+      hasAuthor: s.status === 'ready' && !!s.author,
+      authorName: s.author,
+      authorBio: s.authorBio,
       bodyContent: React.createElement('div', { dangerouslySetInnerHTML: { __html: s.html } })
     };
   }
