@@ -2,16 +2,21 @@
 // used to sit at the repo root is gone, because Vercel serves files before
 // rewrites and it would have shadowed this function).
 //
-// It emits the same 30 URLs the hand-maintained file did — 10 pages x 3 locales,
-// at the clean URLs that byte-match each page's canonical — plus one entry per
-// published blog post per locale, read from content/blog at request time. That
-// last part is the reason this is a function at all: publishing a post is now
-// "drop a .md file in content/blog", with no sitemap edit to remember.
+// It emits the 10 translated pages x 3 locales — at the clean URLs that
+// byte-match each page's canonical — plus the EN-only vertical service pages
+// (English clean URL only, no hreflang cluster), plus one entry per published
+// blog post per locale, read from content/blog at request time. That last part
+// is the reason this is a function at all: publishing a post is now "drop a .md
+// file in content/blog", with no sitemap edit to remember.
 //
 // Still no lastmod/changefreq/priority, on purpose.
 //
-// PAGES is the hand-maintained list: add a page here when you add one to the
-// site. The empty string is the homepage (/ , /es , /he).
+// PAGES is the hand-maintained list of fully-translated pages: add a page here
+// when it exists in all three locales. The empty string is the homepage
+// (/ , /es , /he). EN_ONLY_PAGES is for pages that exist in English only — they
+// get a bare English <loc> and NO hreflang, exactly like a single-locale blog
+// post, so the sitemap never points crawlers at an es/he URL that would 404.
+// When a vertical page gains es/he translations, move its slug up into PAGES.
 
 const fs = require('fs');
 const path = require('path');
@@ -34,6 +39,15 @@ const PAGES = [
   'audit',
   'contact',
   'blog'
+];
+
+// English-only pages: no es/he counterpart exists yet, so each gets a single
+// English <loc> and no hreflang links (mirrors postEntry). Move a slug into
+// PAGES once its /es/ and /he/ translations ship.
+const EN_ONLY_PAGES = [
+  'local-seo-for-restaurants',
+  'local-seo-for-beauty-wellness',
+  'local-seo-for-retail'
 ];
 
 // The homepage is "/" in English but "/es" and "/he" elsewhere — no trailing
@@ -66,6 +80,13 @@ function pageEntry(page) {
 
 function postEntry(locale, slug) {
   return ['  <url>', '    <loc>' + url(locale, 'blog/' + slug) + '</loc>', '  </url>'].join('\n');
+}
+
+// EN-only site pages: same single-<loc> shape as a blog post, but under the
+// English page URL. No hreflang, because there is no es/he counterpart to
+// point at — see EN_ONLY_PAGES above.
+function enOnlyPageEntry(page) {
+  return ['  <url>', '    <loc>' + url('en', page) + '</loc>', '  </url>'].join('\n');
 }
 
 // Must agree exactly with api/blog-post.js about what counts as published —
@@ -125,6 +146,11 @@ module.exports = async (req, res) => {
   // Translated pages: one clustered <url> per locale.
   for (const page of PAGES) {
     entries.push(pageEntry(page));
+  }
+
+  // English-only pages: a single English <loc> each, no hreflang cluster.
+  for (const page of EN_ONLY_PAGES) {
+    entries.push(enOnlyPageEntry(page));
   }
 
   // Blog posts: each locale contributes only its own, exactly once. A slug that
