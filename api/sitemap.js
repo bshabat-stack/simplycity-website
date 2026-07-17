@@ -2,11 +2,10 @@
 // used to sit at the repo root is gone, because Vercel serves files before
 // rewrites and it would have shadowed this function).
 //
-// It emits the 10 translated pages x 3 locales — at the clean URLs that
-// byte-match each page's canonical — plus the EN-only vertical service pages
-// (English clean URL only, no hreflang cluster), plus one entry per published
-// blog post per locale, read from content/blog at request time. That last part
-// is the reason this is a function at all: publishing a post is now "drop a .md
+// It emits the 13 translated pages x 3 locales — at the clean URLs that
+// byte-match each page's canonical — plus one entry per published blog post
+// per locale, read from content/blog at request time. That last part is the
+// reason this is a function at all: publishing a post is now "drop a .md
 // file in content/blog", with no sitemap edit to remember.
 //
 // Still no lastmod/changefreq/priority, on purpose.
@@ -38,17 +37,16 @@ const PAGES = [
   'results',
   'audit',
   'contact',
-  'blog'
+  'blog',
+  'local-seo-for-restaurants',
+  'local-seo-for-beauty-wellness',
+  'local-seo-for-retail'
 ];
 
 // English-only pages: no es/he counterpart exists yet, so each gets a single
 // English <loc> and no hreflang links (mirrors postEntry). Move a slug into
 // PAGES once its /es/ and /he/ translations ship.
-const EN_ONLY_PAGES = [
-  'local-seo-for-restaurants',
-  'local-seo-for-beauty-wellness',
-  'local-seo-for-retail'
-];
+const EN_ONLY_PAGES = [];
 
 // The homepage is "/" in English but "/es" and "/he" elsewhere — no trailing
 // slash, matching trailingSlash:false and the canonicals on the pages.
