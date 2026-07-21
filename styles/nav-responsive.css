@@ -43,6 +43,15 @@
   .site-nav__cta { margin:0; padding:.6rem 1.25rem !important; }
 }
 
+/* Between the 900px desktop switch and ~1140px the row is tight: six items plus
+   the CTA and the language switcher. Spanish is the widest ("Cómo funciona" …
+   "Auditoría gratuita") and overflows at 1000px with the default 1.75rem gap,
+   wrapping the bar onto several rows. Tightening the gap in this band only
+   keeps every locale on one line; above it the full spacing returns. */
+@media (min-width:900px) and (max-width:1139.98px){
+  .site-nav__menu { gap:.75rem; }
+}
+
 @media (prefers-reduced-motion:reduce){ .site-nav *, .site-nav__menu { transition:none !important; } }
 
 /* The SimplyCity wordmark ("Simply" + the "City" capsule) is a fixed brand asset and
