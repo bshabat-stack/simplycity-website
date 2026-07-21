@@ -3,26 +3,26 @@ title: "Google Ask Maps: How to Make Sure Your Business Gets Recommended by AI"
 slug: "google-ask-maps"
 date: 2026-07-15
 excerpt: "Google's Ask Maps AI now recommends local businesses by name — not a ranked list. Here's how it decides, and the five Google Business Profile changes that get your business recommended."
-dateLabel: "Updated Jul 15, 2026"
+dateLabel: "Updated Jul 22, 2026"
 metaTitle: "Google Ask Maps: Get Your Business Recommended by AI"
 metaDescription: "Google's new Ask Maps AI recommends local businesses by name. Learn how it works and the 5 profile changes your business needs to show up."
 canonical: "https://simplycity-website.vercel.app/blog/google-ask-maps"
 publishDate: "2026-07-15"
-updatedDate: "2026-07-15"
+updatedDate: "2026-07-22"
 author: "Ben Shabat"
 authorBio: "Ben Shabat is a content marketing strategist with 8+ years writing across fintech and B2B tech. He turns complex ideas into compelling, informative copy. When not crafting campaigns, he's out in the sun with family, or diving deep into history and geopolitics."
 category: "Local SEO"
 ogImage: "/blog/google-ask-maps/hero.jpg"
-ogImageAlt: "Google Ask Maps showing a restaurant recommendation in Barcelona"
+ogImageAlt: "Google Ask Maps recommending a restaurant in response to a conversational query"
 readingTime: "8 min"
 lang: "en"
 ---
 
 Google Ask Maps, launched in March 2026, is a Gemini-powered AI inside Google Maps that recommends specific local businesses by name in response to conversational queries. Businesses that show up are those with complete, attribute-rich Google Business Profiles (GBPs), specific customer reviews, and listed services. If your profile is incomplete, it's essentially invisible to Ask Maps — regardless of quality or location.
 
-<img src="/blog/google-ask-maps/hero.jpg" alt="Google Ask Maps showing a restaurant recommendation in Barcelona" width="1200" height="630" loading="eager" fetchpriority="high">
+<img src="/blog/google-ask-maps/hero.jpg" alt="Google Ask Maps recommending a restaurant in response to a conversational query" width="1200" height="630" loading="eager" fetchpriority="high">
 
-Google Ask Maps launched in March 2026 and it is already changing which restaurants and salons customers find. According to Rio SEO's 2026 Local Search Report — which analysed performance data from over 239,000 business locations — AI-powered platforms have fundamentally compressed the local discovery journey, with AI now answering more queries before users reach traditional search results. If your Google Business Profile doesn't give Ask Maps enough to work with, your business won't appear — regardless of how good it is.
+[Google Ask Maps launched on 12 March 2026](https://blog.google/products-and-platforms/products/maps/ask-maps-immersive-navigation/) and it is already changing which restaurants and salons customers find in the markets where it has rolled out. According to [Rio SEO's 2026 Local Search Report](https://www.rioseo.com/blog/2026-local-search-report/) — which analysed performance data from over 239,000 US enterprise locations across seven industries — AI-powered platforms have fundamentally compressed the local discovery journey, with AI now answering more queries before users reach traditional search results. If your Google Business Profile doesn't give Ask Maps enough to work with, your business won't appear — regardless of how good it is.
 
 This guide explains what Google Ask Maps is, how it decides who to recommend, and the five specific actions restaurant and salon owners can take today to appear in Ask Maps recommendations.
 
@@ -60,7 +60,7 @@ A concrete example: a user searches for "a salon good for colour treatments near
 
 > "The more complete and specific your Google Business Profile, the more signals Ask Maps has to match your business to the right customer query." — SimplyCity
 
-According to Blogging Wizard's 2026 Google Business Profile statistics, profiles with 100% completeness rank 50% higher in local results than partially completed profiles. Ask Maps amplifies this gap further because it needs attribute-level specificity, not just basic information.
+[Google states directly](https://support.google.com/business/answer/7091) that businesses with complete and accurate information are more likely to show up in local search results — and [Whitespark's 2026 Local Search Ranking Factors](https://whitespark.ca/local-search-ranking-factors/) puts Google Business Profile signals, which include completeness, at 32% of Local Pack weight, the largest single category. Ask Maps amplifies this gap further because it needs attribute-level specificity, not just basic information.
 
 ### Signal 2: Reviews are AI training data
 
@@ -70,9 +70,9 @@ Ask Maps doesn't just count reviews — Google's Gemini AI reads them. When mult
 
 This means the language of reviews matters as much as the star rating. A 4.6-star business with 60 reviews that specifically mention "outdoor terrace," "quiet atmosphere," and "good for remote work" will outrank a 4.8-star business with 200 reviews that all say "great place, highly recommend" — for any attribute-specific query.
 
-> "Ask Maps performs sentiment analysis on review content to determine what a business is known for beyond its category." — SEO Vendor, Google Ask Maps Agency Guide 2026
+> "Ask Maps reads what your reviews say, not just how many you have — the recurring phrases become the attributes it matches you on." — SimplyCity
 
-Review velocity also matters. According to Search Engine Land's analysis of Google Ask Maps and local ranking factors, review recency — how recently new reviews were posted — often outweighs total review count in determining local ranking position.
+Review velocity also matters. [Whitespark's 2026 Local Search Ranking Factors](https://whitespark.ca/local-search-ranking-factors/) puts review signals at roughly 20% of Local Pack weight, and practitioners consistently rank review recency — how recently new reviews were posted — above raw review total. [BrightLocal's Local Consumer Review Survey 2026](https://www.brightlocal.com/research/local-consumer-review-survey/) finds the same pattern among customers: 74% look for reviews written within the last three months.
 
 ### Signal 3: GBP attributes are the new ranking factor
 
@@ -80,13 +80,13 @@ GBP attributes — the checkboxes that describe operational details like "outdoo
 
 Each attribute functions as a match signal for attribute-specific queries. A café with "outdoor seating" and "good for remote work" checked will surface when someone asks "café with a terrace where I can work." A café without those attributes set won't appear — even if it has both a terrace and fast WiFi.
 
-GBP attributes are the most underused section in most local business profiles. According to Google's official guidance on Business Profile optimisation, the attributes section contains hundreds of options depending on business type — and most businesses have checked fewer than 20% of the applicable ones.
+GBP attributes are the most underused section in most local business profiles. [Google's guidance on editing your Business Profile](https://support.google.com/business/answer/3039617) shows how many attribute options exist for a given business type — typically far more than an owner sets during initial setup, which is where the opportunity sits.
 
 > "Every unchecked GBP attribute is a query Ask Maps can't match you to." — SimplyCity
 
 ## A real-world Ask Maps scenario
 
-Here is a scenario that is playing out right now in Barcelona, London, Madrid, and every other city where Ask Maps is active.
+Here is the scenario already playing out in every city where Ask Maps is live — and the one that will play out in Barcelona the day it arrives.
 
 A user opens Google Maps and asks: "best tapas restaurant for a group dinner with good vibes."
 
@@ -100,7 +100,7 @@ Ask Maps recommends Restaurant B. Restaurant A does not appear.
 
 Restaurant A is older, potentially closer, and may serve better food — but Ask Maps has no evidence of any of this. Restaurant B gave the AI everything it needed.
 
-This is not a hypothetical future scenario. This is happening now, in every city where Ask Maps is active (which includes Spain as of March 2026).
+This is not a hypothetical future scenario. It is happening now in every city where Ask Maps is active — currently the US and India, with other markets expected to follow.
 
 ## 5 actions to show up in Google Ask Maps
 
@@ -108,9 +108,9 @@ These five actions, taken in priority order, are sufficient to meaningfully impr
 
 ### 1. Complete every section of your Google Business Profile
 
-A profile with 100% completeness ranks 50% higher than a partially completed profile. Start with the three highest-impact fields:
+Google is explicit that complete, accurate profiles are more likely to show up in local results. Start with the three highest-impact fields:
 
-- **Primary category** — This is the single most important relevance signal in a GBP, according to a survey of local SEO experts (BrightLocal Local Search Industry Survey, 2023). Be specific: "Tapas Restaurant" outperforms "Restaurant." "Hair Colouring Salon" outperforms "Hair Salon."
+- **Primary category** — This is the single most important relevance signal in a GBP, according to the 47 local SEO practitioners surveyed for [Whitespark's 2026 Local Search Ranking Factors](https://whitespark.ca/local-search-ranking-factors/). Be specific: "Tapas Restaurant" outperforms "Restaurant." "Hair Colouring Salon" outperforms "Hair Salon."
 - **Business description** — Google provides 750 characters. Include the business type, neighbourhood, core service, and 1–2 standout attributes. Write naturally: "Cut n'Color is a Barcelona hair salon specialising in colour treatments, balayage, and precision cuts. Located in Eixample, we serve both locals and visitors looking for expert results in a relaxed environment."
 - **Name, address, phone, hours** — must be accurate and match every other directory listing. Inconsistencies suppress ranking.
 
@@ -132,7 +132,7 @@ When requesting a review, try: "Would you mind mentioning what you had or what s
 
 This shifts reviews from "Amazing place, 5 stars!" to "Had the balayage and toning — best colour result I've found in Barcelona. Took about 3 hours and the result was exactly what I wanted." The second review adds at least four attribute signals ("balayage," "toning," "Barcelona," "3 hours") that the first does not.
 
-Reply to every review — positive and negative. Review replies are also read by Ask Maps as a signal of active management and trustworthiness (Search Engine Land, Google Local Pack ranking guide).
+Reply to every review — positive and negative. [Google itself notes](https://support.google.com/business/answer/7091) that replying to reviews shows you value customer feedback, and that positive reviews and helpful replies help a business stand out.
 
 Target: 2–3 new reviews per week. Review velocity consistently outweighs total review count for local ranking — a business receiving fresh reviews weekly will outrank a competitor with a higher total count but no recent activity.
 
@@ -144,7 +144,7 @@ Each service or product listing is a keyword-rich data point Ask Maps uses for r
 - **Restaurants:** add the full menu, or a simplified version (starters, mains, desserts), via GBP's built-in menu feature.
 - **Cafés:** list all offerings — specialty coffee, brunch, pastries, vegan options, all-day breakfast.
 
-According to Map Ranks' 2026 guide on optimising GBP for AI Overviews, GBP profiles with services and products listed are significantly more visible for service-specific queries — because the AI pulls directly from the Services section when matching a user's request to available businesses.
+Profiles with services and products listed are far more visible for service-specific queries, because the AI pulls directly from the Services section when matching a request to available businesses. An empty Services section gives it nothing to match against.
 
 ### 5. Post on Google Business Profile weekly
 
@@ -176,7 +176,7 @@ Google Ask Maps is a conversational AI search feature inside Google Maps, launch
 
 **Is Google Ask Maps available in Spain?**
 
-Yes. Google Ask Maps is actively live in Spain, including Barcelona and other major cities, as of its March 2026 launch. Google has announced a full global rollout by the end of 2026. Ask Maps is currently active across the US, UK, Spain, and other major European markets.
+Not yet. Ask Maps [launched on 12 March 2026](https://blog.google/products-and-platforms/products/maps/ask-maps-immersive-navigation/) in the US and India, and as of July 2026 those remain the only markets where it is live. Google has said the feature will expand to more countries but has not announced a date for Spain or the wider EU, where GDPR and DMA requirements make the rollout slower. That gap is an advantage rather than a reason to wait: the profile signals Ask Maps reads are the same ones that already drive Google Maps ranking today, so a business that optimises now is ranking better in the meantime and is ready the day the feature arrives.
 
 **How does Ask Maps decide which businesses to recommend?**
 
@@ -204,7 +204,7 @@ Consistent GBP management — weekly posts, review responses, attribute updates,
 
 ## Summary: what Google Ask Maps means for your business
 
-Google Ask Maps, launched March 2026, is Google's AI-powered recommendation layer inside Google Maps. It recommends specific local businesses by name in response to conversational queries. The businesses it recommends are those with complete, specific, attribute-rich Google Business Profiles, specific customer review language, and listed services and products. Businesses with incomplete profiles are not recommended — regardless of quality or location. Profile completeness correlates with 50% higher ranking. Review velocity consistently outweighs total review count. GBP attributes are the most underused, highest-opportunity optimisation available to most local businesses today.
+Google Ask Maps, launched March 2026, is Google's AI-powered recommendation layer inside Google Maps. It recommends specific local businesses by name in response to conversational queries. The businesses it recommends are those with complete, specific, attribute-rich Google Business Profiles, specific customer review language, and listed services and products. Businesses with incomplete profiles are not recommended — regardless of quality or location. Google Business Profile signals, completeness among them, carry 32% of Local Pack ranking weight, the largest single category. Review velocity consistently outweighs total review count. GBP attributes are the most underused, highest-opportunity optimisation available to most local businesses today.
 
 ## Don't wait for your competitors to figure this out
 
@@ -218,4 +218,4 @@ To see exactly where your business stands — what Ask Maps sees when a customer
 
 ---
 
-*SimplyCity helps local businesses rank higher on Google Maps and get recommended by Google Ask Maps. Powered by MIDDLEPOINT Solutions S.L., Barcelona. Results cited (Café Menssana, Cut n'Color, La Salumeria) are from active SimplyCity client accounts.*
+*SimplyCity helps local businesses rank higher on Google Maps and get recommended by Google Ask Maps. Powered by MIDDLEPOINT Solutions S.L., Barcelona. Sources cited are [Google's Ask Maps announcement](https://blog.google/products-and-platforms/products/maps/ask-maps-immersive-navigation/), [Google's local ranking documentation](https://support.google.com/business/answer/7091), [Rio SEO's 2026 Local Search Report](https://www.rioseo.com/blog/2026-local-search-report/), [Whitespark's 2026 Local Search Ranking Factors](https://whitespark.ca/local-search-ranking-factors/) and [BrightLocal's Local Consumer Review Survey 2026](https://www.brightlocal.com/research/local-consumer-review-survey/). Results cited (Café Menssana, Cut n'Color, La Salumeria) are from active SimplyCity client accounts.*

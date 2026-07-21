@@ -46,17 +46,17 @@ Before changing anything, run three checks in this order. They separate the two 
 
 ### Reason 1: The profile was never verified
 
-This is the single most common cause, and the most quietly missed. Creating a Business Profile is not the same as verifying one. Google's documentation is explicit that only verified businesses can show their information on Maps and Search — an unverified profile can sit in the dashboard looking complete and be invisible to every customer.
+This is the single most common cause, and the most quietly missed. Creating a Business Profile is not the same as verifying one. [Google's documentation](https://support.google.com/business/answer/7107242) is explicit that only verified businesses can show their information on Maps and Search — an unverified profile can sit in the dashboard looking complete and be invisible to every customer.
 
 **The fix:** open the dashboard and complete verification. Google increasingly routes this through video verification rather than a postcard: a single unedited recording showing your signage, the surrounding street, your equipment, and proof you manage the place. Film it in one take, in daylight, and show the exterior before you walk in. Rejections are usually about a missing link in that chain, not about the business being ineligible.
 
 ### Reason 2: The profile is suspended or disabled
 
-If a profile violates Google's guidelines it is disabled or suspended, and it stops showing to the public — often with no notification that lands anywhere the owner reads.
+If a profile violates [Google's guidelines for representing your business](https://support.google.com/business/answer/3038177) it is disabled or suspended, and it stops showing to the public — often with no notification that lands anywhere the owner reads.
 
 2026 has been a heavy year for this. Local search industry trackers have reported repeated mass suspension waves through the spring, with enforcement falling hardest on brand-new listings and on profiles that were recently edited. The common triggers are a keyword-stuffed business name, an address or category that contradicts your other public records, and a burst of rapid edits that trips automated review.
 
-**The fix:** correct the underlying violation *before* filing for reinstatement — a request submitted against an uncorrected profile mostly gets denied. Set the business name to the name on your signage and nothing more, restore your real address, and file the reinstatement form with documentation: a utility bill, a lease, a business registration, photos of the signage. Clean single-profile cases typically resolve in a few days to about two weeks.
+**The fix:** correct the underlying violation *before* filing for reinstatement — a request submitted against an uncorrected profile mostly gets denied. Set the business name to the name on your signage and nothing more, restore your real address, and file [Google's reinstatement form](https://support.google.com/business/answer/4569145) with documentation: a utility bill, a lease, a business registration, photos of the signage. Clean single-profile cases typically resolve in a few days to about two weeks.
 
 ### Reason 3: The listing is marked permanently closed
 
@@ -80,15 +80,15 @@ Completeness compounds the same problem. Missing services, no products, no attri
 
 ### Reason 6: Proximity, address, and service-area setup
 
-Distance is one of Google's three stated local ranking factors, along with relevance and prominence — and it is the one you cannot argue with. There is no single Maps ranking; there is a different result for every point on the map. Ranking third from your shop and invisible two kilometres away is normal, not broken.
+Distance is one of [Google's three stated local ranking factors](https://support.google.com/business/answer/7091), along with relevance and prominence — and it is the one you cannot argue with. There is no single Maps ranking; there is a different result for every point on the map. Ranking third from your shop and invisible two kilometres away is normal, not broken.
 
-Setup errors make it much worse. Google's guidance is direct: if you serve customers at their location rather than yours — a plumber, a mobile groomer, a home-based studio — you should hide your address and define a service area instead. Displaying a home address you do not receive customers at is a common suspension trigger. Conversely, hiding the address of a real storefront removes the map pin that pulls in nearby searches.
+Setup errors make it much worse. [Google's guidance on managing your business address](https://support.google.com/business/answer/2853879) is direct: if you serve customers at their location rather than yours — a plumber, a mobile groomer, a home-based studio — you should hide your address and define a service area instead. Displaying a home address you do not receive customers at is a common suspension trigger. Conversely, hiding the address of a real storefront removes the map pin that pulls in nearby searches.
 
 **The fix:** match the setup to reality. Storefront customers come to → show the address. Service area only → hide it and name up to 20 cities, postal codes or regions, keeping the area inside roughly a two-hour drive of your base rather than claiming a whole country. Both → a hybrid profile, which requires permanent signage and staffed hours. Then check your ranking from several points across your target area, not just from inside the shop.
 
 ### Reason 7: Weak prominence — too few, too old reviews
 
-If the profile is verified, correctly categorised and properly placed and still does not appear for category searches, prominence is usually what is missing. Google's own guidance names review count and review score as inputs to it, and Whitespark's 2026 Local Search Ranking Factors survey puts review signals at roughly 20% of Local Pack weight.
+If the profile is verified, correctly categorised and properly placed and still does not appear for category searches, prominence is usually what is missing. Google's own guidance names review count and review score as inputs to it, and [Whitespark's 2026 Local Search Ranking Factors](https://whitespark.ca/local-search-ranking-factors/) survey puts review signals at roughly 20% of Local Pack weight.
 
 The failure mode is rarely a bad rating. It is a small, stale set: forty reviews, none of them from this year, against a competitor collecting six a month. That gap compounds, because the business ranking above you is meeting more customers who then leave more reviews.
 
@@ -176,4 +176,4 @@ SimplyCity's free 15-minute audit checks your Business Profile's verification an
 
 ---
 
-*SimplyCity helps local businesses rank higher on Google Maps across Barcelona and Spain. Powered by MIDDLEPOINT Solutions S.L., Barcelona. Guidance cited is from Google's Business Profile verification, address and local ranking documentation, from Whitespark's 2026 Local Search Ranking Factors, and from 2026 suspension-wave reporting by local search industry trackers. Results cited (Café Menssana, Cut n'Color, La Salumeria) are from active SimplyCity client accounts.*
+*SimplyCity helps local businesses rank higher on Google Maps across Barcelona and Spain. Powered by MIDDLEPOINT Solutions S.L., Barcelona. Guidance cited is from Google's Business Profile documentation on [verification](https://support.google.com/business/answer/7107242), [business address](https://support.google.com/business/answer/2853879), [representation guidelines](https://support.google.com/business/answer/3038177) and [local ranking](https://support.google.com/business/answer/7091), and from [Whitespark's 2026 Local Search Ranking Factors](https://whitespark.ca/local-search-ranking-factors/). 2026 suspension-wave activity is as reported across local search trade coverage. Results cited (Café Menssana, Cut n'Color, La Salumeria) are from active SimplyCity client accounts.*

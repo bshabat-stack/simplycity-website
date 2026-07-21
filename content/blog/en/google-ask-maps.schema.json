@@ -6,7 +6,7 @@
     "description": "Google's new Ask Maps AI recommends local businesses by name. Learn how it works and the 5 profile changes your business needs to show up.",
     "image": "https://simplycity-website.vercel.app/blog/google-ask-maps/hero.jpg",
     "datePublished": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-07-22",
     "author": {
       "@type": "Person",
       "name": "Ben Shabat",
@@ -42,7 +42,7 @@
         "name": "Is Google Ask Maps available in Spain?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Google Ask Maps is live in Spain, including Barcelona, as of its March 2026 launch, with a full global rollout announced for the end of 2026. It is currently active across the US, UK, Spain, and other major European markets."
+          "text": "Not yet. Ask Maps launched on 12 March 2026 in the US and India, and as of July 2026 those remain the only markets where it is live. Google has said the feature will expand to more countries but has not announced a date for Spain or the wider EU, where GDPR and DMA requirements make the rollout slower. The profile signals Ask Maps reads are the same ones that already drive Google Maps ranking today, so optimising now improves current rankings and prepares the profile for the feature's arrival."
         }
       },
       {

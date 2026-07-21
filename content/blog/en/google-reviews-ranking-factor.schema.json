@@ -6,7 +6,7 @@
     "description": "Google reviews aren't just social proof — they're about 20% of local ranking weight. Here's the math on what a 40-review gap costs your business.",
     "image": "https://simplycity-website.vercel.app/blog/google-reviews-ranking-factor/hero.jpg",
     "datePublished": "2026-07-21",
-    "dateModified": "2026-07-21",
+    "dateModified": "2026-07-22",
     "author": {
       "@type": "Person",
       "name": "Ben Shabat",
@@ -74,7 +74,7 @@
         "name": "Do negative reviews hurt my local ranking?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A negative review lowers your average rating, which has some effect, but the larger risk is conversion: 77% of consumers say they are discouraged by negative reviews. The mitigation is volume and response. A handful of negative reviews inside a large, recent, well-answered set reads as normal; the same reviews inside a set of fifteen, none of them answered, reads as a warning."
+          "text": "A negative review lowers your average rating, which has some effect, but the larger risk is conversion: BrightLocal's 2026 survey found that 77% of consumers say negative reviews make them less likely to use a business. The mitigation is volume and response. A handful of negative reviews inside a large, recent, well-answered set reads as normal; the same reviews inside a set of fifteen, none of them answered, reads as a warning."
         }
       },
       {
