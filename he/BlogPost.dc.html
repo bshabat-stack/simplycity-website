@@ -162,9 +162,13 @@ class Component extends DCLogic {
       .then(raw => {
         const post = parsePostFrontmatter(raw);
         if (!post.meta.title) throw new Error('post has no title in frontmatter');
-        const html = window.marked
+        const html = (window.marked
           ? window.marked.parse(post.body)
-          : escapeHtml(post.body).split(/\r?\n\r?\n/).map(p => '<p>' + p + '</p>').join('');
+          : escapeHtml(post.body).split(/\r?\n\r?\n/).map(p => '<p>' + p + '</p>').join(''))
+          // marked emits a bare <table>; .post-table is the scroll container that
+          // keeps a wide table from widening the page itself on narrow screens.
+          .replace(/<table>/g, '<div class="post-table"><table>')
+          .replace(/<\/table>/g, '</table></div>');
         this.setState({
           status: 'ready',
           title: post.meta.title,

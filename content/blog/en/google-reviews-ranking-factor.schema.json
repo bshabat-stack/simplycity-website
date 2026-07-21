@@ -1,0 +1,99 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Do Google Reviews Affect Local Ranking? The Math Behind Maps Placement",
+    "description": "Google reviews aren't just social proof — they're about 20% of local ranking weight. Here's the math on what a 40-review gap costs your business.",
+    "image": "https://simplycity-website.vercel.app/blog/google-reviews-ranking-factor/hero.jpg",
+    "datePublished": "2026-07-21",
+    "dateModified": "2026-07-21",
+    "author": {
+      "@type": "Person",
+      "name": "Ben Shabat",
+      "description": "Content marketing strategist with 8+ years writing across fintech and B2B tech."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SimplyCity",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://simplycity-website.vercel.app/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://simplycity-website.vercel.app/blog/google-reviews-ranking-factor"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do Google reviews affect local ranking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Google's own documentation states that review count and review score contribute to prominence, one of the three factors — alongside relevance and distance — that determine local ranking. Whitespark's 2026 Local Search Ranking Factors survey estimates review signals at roughly 20% of Local Pack ranking weight, the second-largest category after Google Business Profile signals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many Google reviews do I need to rank on Google Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no fixed threshold. The number that matters is relative: how many reviews the businesses currently ranking above you for your search terms have. As a rough guide, restaurants generally need higher volume than salons or clinics, and retail shops typically need the least because so few of their competitors collect reviews at all."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do reviews affect ranking more than star rating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "They work together, but the more useful distinction is between total count and review velocity. Past roughly 50 reviews, adding to the total produces diminishing returns, while a steady flow of recent reviews keeps producing gains. Rating matters most as a conversion threshold — 68% of consumers require at least 4 stars before they will use a business."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly do new Google reviews affect my ranking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Individual reviews appear on your profile within hours. Ranking movement from a sustained change in review velocity typically becomes visible over four to eight weeks, and continues compounding as long as the flow is maintained. A single burst of reviews followed by silence produces a much smaller effect than the same number spread steadily over three months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I ask customers for Google reviews?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Google's policies permit asking customers for reviews. What is prohibited is incentivising them with discounts, free items, or prize draws, as well as review gating (asking only happy customers) and buying reviews. Asking every customer, without conditions and without reward, is both permitted and the most effective approach."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do negative reviews hurt my local ranking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A negative review lowers your average rating, which has some effect, but the larger risk is conversion: 77% of consumers say they are discouraged by negative reviews. The mitigation is volume and response. A handful of negative reviews inside a large, recent, well-answered set reads as normal; the same reviews inside a set of fifteen, none of them answered, reads as a warning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do reviews on Yelp or TripAdvisor affect my Google ranking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not directly — Google ranks on its own review data. But third-party reviews contribute to overall prominence and are read by AI search tools that draw on the wider web. For local ranking specifically, Google reviews are where effort produces the most measurable return."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://simplycity-website.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://simplycity-website.vercel.app/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Do Google Reviews Affect Local Ranking?", "item": "https://simplycity-website.vercel.app/blog/google-reviews-ranking-factor" }
+    ]
+  }
+]

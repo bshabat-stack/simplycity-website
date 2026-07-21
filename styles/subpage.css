@@ -65,6 +65,12 @@
 .post-body pre code { background:none; padding:0; }
 .post-body img { display:block; max-width:100%; height:auto; border-radius:14px; margin:1.75rem 0; }
 .post-body hr { border:0; border-top:1px solid var(--border-hairline); margin:2rem 0; }
+/* Markdown tables (GFM). The wrapper scrolls rather than the page, so a wide
+   comparison table can't push the 680px column sideways on a phone. */
+.post-body .post-table { overflow-x:auto; margin:1.75rem 0; }
+.post-body table { width:100%; border-collapse:collapse; font-size:.9375rem; }
+.post-body th, .post-body td { text-align:start; padding:.625rem .75rem; border-bottom:1px solid var(--border-hairline); }
+.post-body th { font-weight:800; color:var(--ink-900); white-space:nowrap; }
 
 /* Author byline at the foot of a post (name + bio from frontmatter). */
 .post-author { max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:.5rem; }
