@@ -1,0 +1,107 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Why Is My Business Not Showing Up on Google Maps? 8 Reasons and the Fix for Each",
+    "description": "Your business isn't showing on Google Maps for one of eight reasons. Here's how to work out which one applies to you, and exactly how to fix it.",
+    "image": "https://simplycity-website.vercel.app/blog/business-not-showing-on-google-maps/hero.jpg",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": {
+      "@type": "Person",
+      "name": "Ben Shabat",
+      "description": "Content marketing strategist with 8+ years writing across fintech and B2B tech."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SimplyCity",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://simplycity-website.vercel.app/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://simplycity-website.vercel.app/blog/business-not-showing-on-google-maps"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why is my business not showing up on Google Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Almost always one of eight causes: the Business Profile is unverified, suspended, marked permanently closed, or duplicated; or the profile is live but has the wrong primary category, an incorrect address or service-area setup, too few and too old reviews, or inconsistent business details across the web. Search your exact business name in an incognito window first — if the listing appears, the problem is ranking rather than visibility, and the last four causes are the ones to work through."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take for a new business to show up on Google Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A new profile appears once verification completes, which usually takes a few days and occasionally up to two weeks where video verification is required. Appearing is not the same as ranking: showing up for your own business name happens immediately after verification, while showing up for category searches like \"bakery near me\" typically takes four to eight weeks of building relevance and prominence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why did my business disappear from Google Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most common cause in 2026 is a suspension triggered by a recent edit — a keyword added to the business name, a changed address, or several rapid changes at once. Check your Business Profile dashboard for the status. If the listing still appears when you search its name but no longer appears for category searches, nothing was removed; you were outranked, which is a ranking problem rather than a policy one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does my business show when I search its name but not for my services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because those are different searches. A name search only requires Google to match the name. A category search asks Google to rank you against every comparable business nearby, using relevance, distance and prominence. A listing that only ever appears by name is usually mis-categorised, thin on services and photos, or short on recent reviews."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "My business shows on Google Maps but not in the top 3 — why?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Local Pack shows three results, and which three depends on where the searcher is standing. Check your position from several points across your target area rather than from inside your premises. If you are consistently just below the pack, the gap is usually prominence — review count, review velocity, and the depth of the website behind the profile."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a website for my business to show on Google Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. A verified Business Profile can appear on Maps with no website at all. But a website materially helps you rank: it is where Google confirms your business details, reads your service pages, and finds the structured data that supports the profile. Profiles with nothing behind them tend to plateau below competitors who have both."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why can I see my business on Google Maps but customers can't?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because you are logged into the account that owns it. Google shows an owner their own profile in places where the public listing is unverified, suspended, or pending review. Always test in an incognito window or a logged-out browser before concluding that a listing is live."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I fix this myself, or do I need help?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Verification, reopening a closed listing, correcting categories and merging duplicates are all owner-fixable in an afternoon. Suspensions with a prior denial, multi-location duplicate tangles, and ranking gaps against established competitors are where outside help pays for itself. Start with a diagnosis either way, so you know which of the eight causes you are dealing with before spending time on the wrong one."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://simplycity-website.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://simplycity-website.vercel.app/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Why Is My Business Not Showing Up on Google Maps?", "item": "https://simplycity-website.vercel.app/blog/business-not-showing-on-google-maps" }
+    ]
+  }
+]
