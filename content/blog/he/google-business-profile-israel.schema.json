@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "פרופיל עסקי דו-לשוני בגוגל מפות: המדריך הישראלי",
+    "description": "איך בונים פרופיל עסקי בגוגל שנמצא גם בחיפוש בעברית וגם באנגלית: שדה השם, קטגוריות, שירותים, תיאור, ביקורות ועקביות פרטים במקורות ישראליים.",
+    "image": "https://simplycity-website.vercel.app/blog/google-business-profile-israel/hero.jpg",
+    "inLanguage": "he-IL",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": {
+      "@type": "Person",
+      "name": "Ben Shabat",
+      "description": "אסטרטג תוכן עם יותר משמונה שנות ניסיון בכתיבה בתחומי הפינטק והטכנולוגיה."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SimplyCity",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://simplycity-website.vercel.app/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://simplycity-website.vercel.app/he/blog/google-business-profile-israel"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "he-IL",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "אפשר להזין שם עסק בשתי שפות בגוגל?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "לא. יש שדה שם אחד, וההנחיות של גוגל מחייבות שהוא יהיה השם האמיתי של העסק כפי שהוא מופיע על השלט ובאתר. הוספת מידע מיותר לשם עלולה להוביל להשעיית הפרופיל. את הגרסה השנייה של השם מכניסים בתיאור העסק, בתוך משפט טבעי."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "באיזו שפה כדאי לכתוב את שם העסק?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "בשפה שבה השם באמת מופיע על השלט. אם השלט דו-לשוני, בחרו את הגרסה שהלקוחות משתמשים בה בפועל כשהם מדברים על העסק. ההתאמה בחיפוש בשפה השנייה מגיעה מהקטגוריות, מהשירותים ומהביקורות — לא מהשם."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם קטגוריות בגוגל צריכות להיות בעברית או באנגלית?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "לא צריך להחליט. הקטגוריות הן רשימה סגורה שגוגל מתרגמת אוטומטית לשפת הממשק של המשתמש, כך שקטגוריה אחת מכסה את שתי השפות. מה שכן חשוב הוא לבחור את הקטגוריה הראשית המדויקת ביותר ולא את הרחבה ביותר."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "כמה ביקורות צריך כדי להתברג גבוה בגוגל מפות בישראל?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "אין מספר קבוע. המספר הרלוונטי הוא יחסי — כמה ביקורות יש לשלושת העסקים שגוגל מדרגת מעליכם באותו חיפוש. חפשו את הקטגוריה שלכם יחד עם שם השכונה וספרו. בענפים שונים הרף שונה מאוד."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם חשוב באיזו שפה נכתבת הביקורת?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן, ומסיבה מעשית: הביקורות הן הטקסט היחיד בפרופיל שנכתב בשפת הלקוח ולא בשפתכם. תמהיל של ביקורות בעברית ובאנגלית מכניס לפרופיל את שני אוצרות המילים בלי שהזנתם מילה. לכן כדאי לבקש מלקוחות לתאר את מה שקיבלו בפועל, ולא להסתפק בדירוג."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "בכמה זמן צריך להשיב לביקורת?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "בתוך שבוע. לפי סקר הצרכנים של BrightLocal לשנת 2026, 81 אחוזים מהצרכנים מצפים לתגובה בטווח הזה ו-42 אחוזים נמנעים מעסק שלא מגיב כלל. השיבו בשפה שבה נכתבה הביקורת ובניסוח אישי, מכיוון שתגובות גנריות מרחיקות 50 אחוזים מהקוראים."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם צריך גם פרופילים במדריכים ישראליים?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "הם עוזרים, אבל פחות מהעקביות ביניהם. גוגל משווה את השם, הכתובת והטלפון שלכם בין המקורות, ולכן חמישה רישומים זהים שווים יותר מעשרה רישומים שכל אחד מהם מנוסח אחרת. תקנו לפני שתוסיפו."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://simplycity-website.vercel.app/he" },
+      { "@type": "ListItem", "position": 2, "name": "בלוג", "item": "https://simplycity-website.vercel.app/he/blog" },
+      { "@type": "ListItem", "position": 3, "name": "פרופיל עסקי דו-לשוני בגוגל מפות", "item": "https://simplycity-website.vercel.app/he/blog/google-business-profile-israel" }
+    ]
+  }
+]
