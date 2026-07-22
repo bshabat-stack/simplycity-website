@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Cómo responder a una reseña negativa en Google (con plantillas)",
+    "description": "Guía para responder a reseñas negativas en Google: qué espera el cliente, qué reseñas se pueden denunciar y tres plantillas para hostelería, belleza y retail.",
+    "image": "https://simplycity-website.vercel.app/blog/como-responder-resenas-negativas-google/hero.jpg",
+    "inLanguage": "es-ES",
+    "datePublished": "2026-07-22",
+    "dateModified": "2026-07-22",
+    "author": {
+      "@type": "Person",
+      "name": "Ben Shabat",
+      "description": "Estratega de contenidos con más de 8 años escribiendo sobre tecnología y negocio."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SimplyCity",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://simplycity-website.vercel.app/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://simplycity-website.vercel.app/es/blog/como-responder-resenas-negativas-google"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "es-ES",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Responder a las reseñas mejora el posicionamiento local en Google?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google confirma que el número y la valoración de las reseñas influyen en la prominencia, uno de los tres factores del posicionamiento local, pero no publica que la respuesta en sí sea un factor de ranking. El efecto demostrable de responder es de conversión: el 80 % de los consumidores es más propenso a usar un negocio que responde a todas sus reseñas, frente al 47 % cuando solo se responde a las negativas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿En cuánto tiempo hay que responder a una reseña negativa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Antes de una semana. El 81 % de los consumidores espera respuesta en ese plazo y el 32 % la quiere al día siguiente. Dicho esto, contestar en los primeros diez minutos es peor que hacerlo al día siguiente: las respuestas escritas en caliente son las que más daño reputacional causan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo eliminar una reseña negativa de Google?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Solo si incumple las políticas de contenido de Google: contenido falso, spam, conflicto de intereses, lenguaje ofensivo o información personal. Se denuncia desde el propio Perfil de Empresa. Que la reseña sea injusta o inexacta no es, por sí solo, motivo de retirada, y Google lo dice expresamente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Debo responder también a las reseñas positivas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí, y es más importante de lo que parece. Los negocios que solo responden a las negativas obtienen un 47 % de intención de uso, frente al 80 % de los que responden a todas. Responder solo cuando hay una queja es un patrón visible en la ficha."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo usar plantillas para responder a las reseñas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Como estructura, sí; como texto literal, no. Las respuestas genéricas o copiadas ahuyentan al 50 % de los consumidores. Mantén fijo el esqueleto —agradecer, reconocer, explicar el cambio, ofrecer un canal privado— y personaliza siempre el detalle concreto y la firma."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué hago si la reseña es de alguien que nunca fue cliente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Denúnciala por conflicto de intereses o contenido falso y, mientras Google la revisa, publica una respuesta corta y neutra indicando que no consta ninguna reserva o pedido a ese nombre y ofreciendo un canal de contacto. El silencio, para quien lo lee, se parece demasiado a una admisión."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo ofrecer un descuento para que retiren una reseña?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Google prohíbe expresamente ofrecer pagos, descuentos o bienes y servicios gratuitos a cambio de publicar, modificar o retirar reseñas. Además de poder costarte la retirada del perfil, deja por escrito una prueba de la infracción en la propia ficha."
+        }
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://simplycity-website.vercel.app/es" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://simplycity-website.vercel.app/es/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Cómo responder a una reseña negativa en Google", "item": "https://simplycity-website.vercel.app/es/blog/como-responder-resenas-negativas-google" }
+    ]
+  }
+]
