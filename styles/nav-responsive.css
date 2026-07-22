@@ -64,11 +64,10 @@
 
 @media (prefers-reduced-motion:reduce){ .site-nav *, .site-nav__menu { transition:none !important; } }
 
-/* The SimplyCity wordmark ("Simply" + the "City" capsule) is a fixed brand asset and
-   must never mirror. The design-system Logo renders it as inline-flex spans, so under
-   dir="rtl" (/he pages) it reversed to "CitySimply". Pinned here — loaded by every
-   page, every locale — so all placements always read Simply→City. No-op in LTR. */
-.sc-logo { direction: ltr; }
+/* The SimplyCity wordmark is now the real brand artwork (logo-black.webp on light,
+   logo-white.png on dark), not the design-system Logo's inline-flex spans. An <img>
+   cannot be reversed by dir="rtl", so the old `.sc-logo { direction: ltr }` pin that
+   stopped /he rendering it as "CitySimply" is no longer needed and has been removed. */
 
 /* Language switcher — markup lives in each page's header/footer; scripts/lang-switcher.js
    rewrites the hrefs to the equivalent page in the other locale (prefix swap) and keeps
