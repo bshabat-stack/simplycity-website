@@ -21,10 +21,16 @@
 .site-nav__cta { margin-top:.75rem; text-align:center; background:#3f7ff2; color:#fff !important; border-radius:999px; padding:.85rem 1.25rem !important; border-bottom:0 !important; }
 
 /* Current page: scripts/nav-toggle.js sets aria-current="page" on the matching link and
-   --current on the Services label when the match is inside the dropdown. */
+   --current on the Services label when the match is inside the dropdown. The language
+   links carry aria-current="true" instead (set by scripts/lang-switcher.js). */
 .site-nav__menu > a[aria-current="page"],
 .site-nav__sub a[aria-current="page"],
+.site-nav__sub a[aria-current="true"],
 .site-nav__sublabel--current { color:#3f7ff2; }
+
+/* Globe trigger for the language dropdown — icon + caret, sized like the other labels */
+.site-nav__lang { display:flex; align-items:center; gap:.35rem; }
+.site-nav__globe { flex:0 0 auto; }
 
 @media (min-width:900px){
   .site-nav__toggle { display:none; }
@@ -39,8 +45,12 @@
   /* Highlighted = hover OR keyboard focus OR active route → solid brand blue + white text */
   .site-nav__group .site-nav__sub a:hover,
   .site-nav__group .site-nav__sub a:focus,
-  .site-nav__group .site-nav__sub a[aria-current="page"] { background:var(--sky-blue); color:var(--white); }
+  .site-nav__group .site-nav__sub a[aria-current="page"],
+  .site-nav__group .site-nav__sub a[aria-current="true"] { background:var(--sky-blue); color:var(--white); }
   .site-nav__cta { margin:0; padding:.6rem 1.25rem !important; }
+  /* The language group is the inline-end-most bar item — anchor its panel to that edge so
+     it opens inward instead of off the viewport (logical props mirror it under RTL). */
+  .site-nav__group--lang .site-nav__sub { inset-inline-start:auto; inset-inline-end:0; min-width:160px; }
 }
 
 /* Between the 900px desktop switch and ~1140px the row is tight: six items plus
@@ -62,13 +72,12 @@
 
 /* Language switcher — markup lives in each page's header/footer; scripts/lang-switcher.js
    rewrites the hrefs to the equivalent page in the other locale (prefix swap) and keeps
-   aria-current="true" on the active language. Logical properties so it mirrors under RTL. */
-.lang-switcher { display:flex; align-items:center; gap:.5rem; padding:.75rem .25rem; }
-.lang-switcher a { font-size:.9rem; font-weight:600; color:#6b7280; text-decoration:none; }
-.lang-switcher a:hover, .lang-switcher a:focus { color:#1c2230; }
-.lang-switcher a[aria-current="true"] { color:#3f7ff2; }
-.lang-switcher > span { color:#c6ccd8; user-select:none; }
-@media (min-width:900px){ .lang-switcher { padding:0; margin-inline-start:.25rem; } }
+   aria-current="true" on the active language. Logical properties so it mirrors under RTL.
+   In the header the switcher is the panel of the globe dropdown, so it inherits the
+   .site-nav__sub presentation; only the footer keeps the inline row of links. */
+.lang-switcher--footer { display:flex; align-items:center; gap:.5rem; }
+.lang-switcher--footer a { font-size:.9rem; font-weight:600; text-decoration:none; }
+.lang-switcher--footer > span { user-select:none; }
 
 /* Footer variant sits on the dark footer band */
 .lang-switcher--footer { padding:0; }

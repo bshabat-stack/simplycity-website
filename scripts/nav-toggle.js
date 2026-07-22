@@ -48,7 +48,9 @@
       if (!isCurrent && a.hasAttribute('aria-current')) a.removeAttribute('aria-current');
       if (isCurrent && a.closest('.site-nav__sub')) currentInSub = true;
     }
-    var sublabel = nav.querySelector('.site-nav__sublabel');
+    // The language dropdown has a sublabel too (the globe) — the --current marking
+    // belongs to the Services label, so skip the language group.
+    var sublabel = nav.querySelector('.site-nav__group:not(.site-nav__group--lang) .site-nav__sublabel');
     if (sublabel) sublabel.classList.toggle('site-nav__sublabel--current', currentInSub);
   }
 
