@@ -18,7 +18,9 @@
       "name": "SimplyCity",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://simplycity-website.vercel.app/logo.png"
+        "url": "https://simplycity-website.vercel.app/logo-black.png",
+        "width": 256,
+        "height": 64
       }
     },
     "mainEntityOfPage": {
